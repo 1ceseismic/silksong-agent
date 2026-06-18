@@ -1,0 +1,610 @@
+{
+  "boss": {
+    "clips": {
+      "Idle": {
+        "fps": 12.0,
+        "frames": 7
+      },
+      "Combo Slash": {
+        "fps": 24.0,
+        "frames": 28,
+        "triggerFrame": 14
+      },
+      "Antic": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "Rising Slash": {
+        "fps": 18.0,
+        "frames": 5,
+        "triggerFrame": 2
+      },
+      "Charge Antic": {
+        "fps": 12.0,
+        "frames": 4
+      },
+      "RapidSlash Charge": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "TurnToIdle": {
+        "fps": 12.0,
+        "frames": 8
+      },
+      "Counter Stance": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "Engarde": {
+        "fps": 12.0,
+        "frames": 9
+      },
+      "Evade": {
+        "fps": 15.0,
+        "frames": 7,
+        "triggerFrame": 3
+      },
+      "Forward Hop": {
+        "fps": 15.0,
+        "frames": 6,
+        "triggerFrame": 2
+      },
+      "NPC Idle Right": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "NPC Idle Turn Left": {
+        "fps": 12.0,
+        "frames": 8
+      },
+      "NPC Idle Left": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "NPC Idle Turn Right": {
+        "fps": 12.0,
+        "frames": 8
+      },
+      "Possession": {
+        "fps": 12.0,
+        "frames": 3
+      },
+      "Stun": {
+        "fps": 12.0,
+        "frames": 5
+      },
+      "Charge": {
+        "fps": 12.0,
+        "frames": 1
+      },
+      "Charge Recover": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "Downstab Antic": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "Downstab": {
+        "fps": 30.0,
+        "frames": 1
+      },
+      "Downstab End": {
+        "fps": 15.0,
+        "frames": 4
+      },
+      "Counter Antic": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "Counter End": {
+        "fps": 15.0,
+        "frames": 3
+      },
+      "Counter Hit": {
+        "fps": 12.0,
+        "frames": 3
+      },
+      "RapidSlash End": {
+        "fps": 15.0,
+        "frames": 4
+      },
+      "RapidSlash Loop": {
+        "fps": 18.0,
+        "frames": 2
+      },
+      "RapidSlash Effect": {
+        "fps": 20.0,
+        "frames": 4
+      },
+      "Jump Antic": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "Conduct": {
+        "fps": 12.0,
+        "frames": 7
+      },
+      "CrossSlash Antic": {
+        "fps": 12.0,
+        "frames": 3
+      },
+      "Conduct End": {
+        "fps": 12.0,
+        "frames": 8
+      },
+      "Stun Air": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "Stun Recover": {
+        "fps": 15.0,
+        "frames": 3
+      },
+      "Jump AnticQ": {
+        "fps": 12.0,
+        "frames": 4
+      },
+      "Jump Away": {
+        "fps": 20.0,
+        "frames": 3
+      },
+      "Eye Flash": {
+        "fps": 30.0,
+        "frames": 4
+      },
+      "MultiHit Slash": {
+        "fps": 12.0,
+        "frames": 5
+      },
+      "Pose Lean": {
+        "fps": 15.0,
+        "frames": 11
+      },
+      "Pose Upright": {
+        "fps": 15.0,
+        "frames": 11
+      },
+      "Pose Swish": {
+        "fps": 15.0,
+        "frames": 11,
+        "triggerFrame": 1
+      },
+      "Dash Burst": {
+        "fps": 20.0,
+        "frames": 4
+      },
+      "AirDash Burst": {
+        "fps": 20.0,
+        "frames": 4
+      },
+      "Stun Hit": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "Trap Stun": {
+        "fps": 12.0,
+        "frames": 1
+      },
+      "Pose Hornet Defeated": {
+        "fps": 12.0,
+        "frames": 3,
+        "triggerFrame": 1
+      },
+      "NPC Sit": {
+        "fps": 12.0,
+        "frames": 9
+      },
+      "Swish Block": {
+        "fps": 15.0,
+        "frames": 4
+      },
+      "ConductToIdle": {
+        "fps": 12.0,
+        "frames": 6
+      },
+      "NPC Sit Antic": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "NPC SitLook": {
+        "fps": 12.0,
+        "frames": 4
+      },
+      "SitToIdle": {
+        "fps": 12.0,
+        "frames": 10,
+        "triggerFrame": 2
+      },
+      "Combo Slash Q": {
+        "fps": 24.0,
+        "frames": 26,
+        "triggerFrame": 12
+      },
+      "Downstab Antic Q": {
+        "fps": 15.0,
+        "frames": 5
+      },
+      "Bomb Slash Antic": {
+        "fps": 12.0,
+        "frames": 7,
+        "triggerFrame": 2
+      },
+      "Bomb Slash": {
+        "fps": 18.0,
+        "frames": 7,
+        "triggerFrame": 2
+      },
+      "Fall": {
+        "fps": 12.0,
+        "frames": 3
+      },
+      "Land": {
+        "fps": 12.0,
+        "frames": 4
+      },
+      "Death 1": {
+        "fps": 12.0,
+        "frames": 4
+      },
+      "Death 2": {
+        "fps": 12.0,
+        "frames": 4,
+        "triggerFrame": 2
+      },
+      "Lie": {
+        "fps": 30.0,
+        "frames": 1
+      },
+      "LieToWake": {
+        "fps": 12.0,
+        "frames": 9
+      },
+      "Combo Slash Triple": {
+        "fps": 24.0,
+        "frames": 32,
+        "triggerFrame": 14
+      },
+      "P2 Shift Old": {
+        "fps": 12.0,
+        "frames": 18,
+        "triggerFrame": 1
+      },
+      "ChargeMulti Antic": {
+        "fps": 15.0,
+        "frames": 5
+      },
+      "ChargeMulti": {
+        "fps": 18.0,
+        "frames": 6
+      },
+      "ChargeMulti Recover": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "Rising Slash Multi": {
+        "fps": 25.0,
+        "frames": 9,
+        "triggerFrame": 8
+      },
+      "Roar": {
+        "fps": 12.0,
+        "frames": 4,
+        "triggerFrame": 1
+      },
+      "Death Stagger": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "Laugh": {
+        "fps": 12.0,
+        "frames": 5,
+        "triggerFrame": 2
+      },
+      "Tele In": {
+        "fps": 20.0,
+        "frames": 7
+      },
+      "Death Air": {
+        "fps": 12.0,
+        "frames": 3
+      },
+      "Death Land Stun": {
+        "fps": 12.0,
+        "frames": 9
+      },
+      "Tele Out": {
+        "fps": 20.0,
+        "frames": 5
+      },
+      "Wall Bounce": {
+        "fps": 15.0,
+        "frames": 4
+      },
+      "Charge Crossup": {
+        "fps": 12.0,
+        "frames": 7
+      },
+      "Quick Slash": {
+        "fps": 24.0,
+        "frames": 10,
+        "triggerFrame": 2
+      },
+      "RapidSlashAir TeleIn": {
+        "fps": 24.0,
+        "frames": 10,
+        "triggerFrame": 3
+      },
+      "RapidSlashAir": {
+        "fps": 20.0,
+        "frames": 3
+      },
+      "Sing": {
+        "fps": 12.0,
+        "frames": 5,
+        "triggerFrame": 2
+      },
+      "Sing End": {
+        "fps": 12.0,
+        "frames": 2
+      },
+      "RapidSlashAir End": {
+        "fps": 16.0,
+        "frames": 8,
+        "triggerFrame": 2
+      },
+      "Tele Out Fast": {
+        "fps": 20.0,
+        "frames": 1
+      },
+      "Counter Antic Fast": {
+        "fps": 18.0,
+        "frames": 2
+      },
+      "MultiHit Slash Air": {
+        "fps": 12.0,
+        "frames": 1
+      },
+      "Multihit AirEnd": {
+        "fps": 16.0,
+        "frames": 6
+      },
+      "P2 Shift": {
+        "fps": 12.0,
+        "frames": 18,
+        "triggerFrame": 1
+      },
+      "Mid Battle Roar": {
+        "fps": 12.0,
+        "frames": 8,
+        "triggerFrame": 3
+      },
+      "Counter Flash": {
+        "fps": 30.0,
+        "frames": 4
+      },
+      "RapidSlashAir End Q": {
+        "fps": 16.0,
+        "frames": 6
+      },
+      "Swish Block Long": {
+        "fps": 15.0,
+        "frames": 9
+      },
+      "Combo Strike 1": {
+        "fps": 24.0,
+        "frames": 6
+      },
+      "Combo Strike 2": {
+        "fps": 24.0,
+        "frames": 4
+      },
+      "Charge Strike": {
+        "fps": 20.0,
+        "frames": 4
+      },
+      "Downstab Strike": {
+        "fps": 15.0,
+        "frames": 3
+      },
+      "Downstab Followup": {
+        "fps": 18.0,
+        "frames": 3
+      },
+      "Forward Hop Intro": {
+        "fps": 12.0,
+        "frames": 11,
+        "triggerFrame": 5
+      },
+      "": {
+        "fps": 30.0,
+        "frames": 0
+      },
+      "Combo Slash LongAntic": {
+        "fps": 24.0,
+        "frames": 30,
+        "triggerFrame": 16
+      },
+      "Forward Hop Slow": {
+        "fps": 13.0,
+        "frames": 6,
+        "triggerFrame": 2
+      },
+      "Lava Damage": {
+        "fps": 12.0,
+        "frames": 4
+      },
+      "Tele In Fast": {
+        "fps": 24.0,
+        "frames": 7
+      }
+    },
+    "state_map": {
+      "0": {
+        "0": "Idle"
+      },
+      "1": {
+        "0": "Antic",
+        "1": "Combo Strike 1",
+        "2": "Combo Slash",
+        "3": "Combo Strike 2",
+        "4": "Combo Slash"
+      },
+      "2": {
+        "0": "Charge Antic",
+        "1": "Charge Antic",
+        "2": "Charge",
+        "3": "Charge Recover"
+      },
+      "3": {
+        "0": "Jump Antic",
+        "1": "Rising Slash",
+        "2": "Fall",
+        "3": "Downstab Antic",
+        "4": "Downstab",
+        "5": "Wall Bounce"
+      },
+      "4": {
+        "0": "Counter Antic",
+        "1": "Counter Stance",
+        "2": "Counter Hit"
+      },
+      "5": {
+        "0": "RapidSlash Charge",
+        "1": "RapidSlash Loop",
+        "2": "MultiHit Slash",
+        "3": "RapidSlash End"
+      },
+      "6": {
+        "0": "Downstab"
+      },
+      "7": {
+        "0": "Evade",
+        "1": "Evade",
+        "2": "Forward Hop",
+        "10": "Forward Hop",
+        "11": "Forward Hop",
+        "12": "Forward Hop"
+      },
+      "8": {
+        "0": "Stun",
+        "1": "Stun Air",
+        "2": "Stun",
+        "3": "Stun",
+        "4": "Stun Recover"
+      },
+      "9": {
+        "0": "CrossSlash Antic",
+        "1": "CrossSlash Antic",
+        "2": "MultiHit Slash",
+        "3": "Fall"
+      },
+      "10": {
+        "0": "Lava Damage"
+      },
+      "11": {
+        "0": "Pose Lean",
+        "1": "Pose Upright",
+        "2": "Pose Swish"
+      },
+      "12": {
+        "0": "Sing",
+        "1": "Sing End"
+      },
+      "13": {
+        "0": "Death Stagger"
+      }
+    }
+  },
+  "hero": {
+    "clips": {
+      "Hornet_dash": {
+        "fps": 12,
+        "frames": 6
+      },
+      "Hornet_dash_air": {
+        "fps": 12,
+        "frames": 5
+      },
+      "Hornet_fall": {
+        "fps": 12,
+        "frames": 4
+      },
+      "Hornet_hard_land": {
+        "fps": 12,
+        "frames": 6
+      },
+      "Hornet_jump_double": {
+        "fps": 12,
+        "frames": 8
+      },
+      "Hornet_jump_fast": {
+        "fps": 12,
+        "frames": 15
+      },
+      "Hornet_run_new": {
+        "fps": 12,
+        "frames": 10
+      },
+      "Hornet_slash_up": {
+        "fps": 12,
+        "frames": 5
+      },
+      "Hornet_slashes": {
+        "fps": 12,
+        "frames": 17
+      },
+      "Hornet_sprint": {
+        "fps": 12,
+        "frames": 9
+      },
+      "Hornet_wound": {
+        "fps": 12,
+        "frames": 5
+      },
+      "Tool_Wall_Cling": {
+        "fps": 12,
+        "frames": 7
+      },
+      "idle": {
+        "fps": 12,
+        "frames": 6
+      },
+      "recoil_twirl": {
+        "fps": 12,
+        "frames": 9
+      },
+      "stun_ground": {
+        "fps": 12,
+        "frames": 6
+      },
+      "to_idle": {
+        "fps": 12,
+        "frames": 3
+      },
+      "turn": {
+        "fps": 12,
+        "frames": 3
+      }
+    },
+    "state_map": {
+      "idle": "idle",
+      "run": "Hornet_run_new",
+      "airborne": "Hornet_jump_fast",
+      "fall": "Hornet_fall",
+      "dash": "Hornet_dash",
+      "dash_air": "Hornet_dash_air",
+      "attack": "Hornet_slashes",
+      "attack_up": "Hornet_slash_up",
+      "hurt": "Hornet_wound",
+      "wall": "Tool_Wall_Cling",
+      "hard_land": "Hornet_hard_land",
+      "sprint": "Hornet_sprint",
+      "double_jump": "Hornet_jump_double",
+      "stun": "stun_ground",
+      "recoil": "recoil_twirl",
+      "turn": "turn",
+      "land": "to_idle"
+    }
+  }
+}

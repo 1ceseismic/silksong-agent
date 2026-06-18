@@ -1,0 +1,259 @@
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+using UnityStandardAssets.ImageEffects;
+
+namespace SilksongAgent;
+
+public class NoFxManager : MonoBehaviour
+{
+    public static NoFxManager Instance { get; private set; }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        if (CommandLineArgs.NoFx)
+        {
+            ApplyNoFxSettings();
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+    }
+
+    private void ApplyNoFxSettings()
+    {
+        QualitySettings.vSyncCount = 0;
+        QualitySettings.shadows = ShadowQuality.Disable;
+        QualitySettings.pixelLightCount = 0;
+        QualitySettings.antiAliasing = 0;
+        QualitySettings.softParticles = false;
+        QualitySettings.particleRaycastBudget = 0;
+        QualitySettings.realtimeReflectionProbes = false;
+        QualitySettings.softVegetation = false;
+        QualitySettings.skinWeights = SkinWeights.OneBone;
+        QualitySettings.lodBias = 0.3f;
+        QualitySettings.maximumLODLevel = 2;
+        QualitySettings.globalTextureMipmapLimit = 2;
+        QualitySettings.anisotropicFiltering = AnisotropicFiltering.Disable;
+        QualitySettings.billboardsFaceCameraPosition = false;
+
+        OnDemandRendering.renderFrameInterval = 1;
+        GraphicsSettings.useScriptableRenderPipelineBatching = true;
+
+        AudioListener.volume = 0f;
+        AudioListener.pause = true;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (CommandLineArgs.NoFx)
+        {
+            DisableEffectRenderers();
+            DisableCpuHeavyComponents();
+        }
+    }
+
+    private void DisableCpuHeavyComponents()
+    {
+        DisableComponents<InputDebugger>();
+        DisableComponents<PerformanceHud>();
+        DisableComponents<CodeProfiler>();
+        DisableComponents<CheatCodeListener>();
+
+        DisableComponents<RealtimeReflections>();
+        DisableComponents<CameraBlurPlane>();
+        DisableComponents<ColorCurvesManager>();
+
+        DisableComponents<BlurManager>();
+        DisableComponents<LightBlurredBackground>();
+        DisableComponents<SceneParticlesController>();
+        DisableComponents<GrassBehaviour>();
+        DisableComponents<Grass>();
+
+        DisableComponents<BloomOptimized>();
+        DisableComponents<LensCAAndDistortion>();
+        DisableComponents<LightBlur>();
+
+        DisableComponents<AmbientFloat>();
+        DisableComponents<AmbientSway>();
+        DisableComponents<WaveEffectControl>();
+
+        DisableComponents<TrackingTrail>();
+        DisableComponents<CharacterLightDust>();
+        DisableComponents<StatusVignette>();
+
+        DisableComponents<AudioEventManager>();
+        DisableComponents<AudioLoopMaster>();
+        DisableComponents<AudioSourceFadeControl>();
+        DisableComponents<AudioPlayWhenGrounded>();
+        DisableComponents<AudioPlayStateSync>();
+        DisableComponents<AnimatedVolumeControl>();
+        DisableComponents<FadeAudioOnPause>();
+        DisableComponents<FadeAudioOnAwake>();
+
+        DisableComponents<VibrationManagerUpdater>();
+        DisableComponents<HeroVibrationRegion>();
+        DisableComponents<AudioVibrationSyncer>();
+        DisableComponents<AudioSyncedVibration>();
+        DisableComponents<RainVibrationRegion>();
+        DisableComponents<SpriteAlphaVibration>();
+
+        DisableComponents<AmbientLightAnimator>();
+        DisableComponents<AnimatedFadeGroup>();
+        DisableComponents<ColourPainter>();
+        DisableComponents<ColourDistanceSilhouette>();
+        DisableComponents<DashEffect>();
+        DisableComponents<FadeGroup>();
+        DisableComponents<FlashMaterialGroup>();
+        DisableComponents<SimpleFadeOut>();
+        DisableComponents<SimpleSpriteFade>();
+        DisableComponents<SpriteFadePulse>();
+        DisableComponents<TK2DSpriteFadePulse>();
+        DisableComponents<SpriteFlashDistanceSilhouette>();
+
+        DisableComponents<DebrisParticle>();
+        DisableComponents<CycloneDust>();
+        DisableComponents<DriftflyCloud>();
+        DisableComponents<WaterfallParticles>();
+        DisableComponents<ParticleCulling>();
+
+        DisableComponents<Dragonfly>();
+        DisableComponents<TinyMossFly>();
+        DisableComponents<FakeBat>();
+        DisableComponents<FloatingObject>();
+        DisableComponents<IdleBuzzing>();
+        DisableComponents<IdleBuzzingV2>();
+        DisableComponents<MossClump>();
+
+        DisableComponents<EnemyHitEffectsRegular>();
+        DisableComponents<EnemyHitEffectsGhost>();
+        DisableComponents<EnemyHitEffectsBlackKnight>();
+        DisableComponents<EnemyHitEffectsShade>();
+        DisableComponents<EnemyHitEffectsArmoured>();
+        DisableComponents<EnemyHitEffectsBasic>();
+        DisableComponents<InfectedEnemyEffects>();
+
+        DisableComponents<JumpEffects>();
+        DisableComponents<RunEffects>();
+        DisableComponents<SoftLandEffect>();
+        DisableComponents<HardLandEffect>();
+        DisableComponents<HeroFallParticle>();
+
+        DisableComponents<JitterSelfSimple>();
+        DisableComponents<JitterFixPosition>();
+        DisableComponents<JitterEnemyInside>();
+        DisableComponents<LoopRotator>();
+        DisableComponents<SpinSelfSimple>();
+        DisableComponents<RandomTranslation>();
+
+        DisableComponents<PaintSplat>();
+        DisableComponents<PaintBullet>();
+        DisableComponents<SpatterOrange>();
+        DisableComponents<SpatterHoney>();
+        DisableComponents<QuickBurn>();
+
+        DisableComponents<PooledEffectManager>();
+
+        DisableComponents<ThreadIlluminationTK2D>();
+        DisableComponents<SpriteExtruder>();
+        DisableComponents<SetGlobalShaderPos>();
+        DisableComponents<SetGlobalShaderTime>();
+
+        DisableComponents<LowPassDistance>();
+        DisableComponents<SpawnableAudioSource>();
+        DisableComponents<PlayAudioAndRecycle>();
+
+        DisableComponents<UberPostprocess>();
+        DisableComponents<DebandEffect>();
+        DisableComponents<FastNoise>();
+
+        DisableComponents<CameraFade>();
+        DisableComponents<CameraShakeWhileEnabled>();
+        DisableComponents<CameraShakeResponderMechanim>();
+        DisableComponents<NewCameraNoise>();
+    }
+
+    private void DisableComponents<T>() where T : MonoBehaviour
+    {
+        var components = FindObjectsByType<T>(FindObjectsSortMode.None);
+        foreach (var component in components)
+        {
+            component.enabled = false;
+        }
+    }
+
+    private void DisableEffectRenderers()
+    {
+        var particleRenderers = FindObjectsByType<ParticleSystemRenderer>(FindObjectsSortMode.None);
+        foreach (var renderer in particleRenderers)
+        {
+            renderer.enabled = false;
+        }
+
+        var trailRenderers = FindObjectsByType<TrailRenderer>(FindObjectsSortMode.None);
+        foreach (var renderer in trailRenderers)
+        {
+            renderer.enabled = false;
+        }
+
+        var lineRenderers = FindObjectsByType<LineRenderer>(FindObjectsSortMode.None);
+        foreach (var renderer in lineRenderers)
+        {
+            renderer.enabled = false;
+        }
+
+        var lights = FindObjectsByType<Light>(FindObjectsSortMode.None);
+        foreach (var light in lights)
+        {
+            light.enabled = false;
+        }
+
+        var reflectionProbes = FindObjectsByType<ReflectionProbe>(FindObjectsSortMode.None);
+        foreach (var probe in reflectionProbes)
+        {
+            probe.enabled = false;
+        }
+
+        var spriteMasks = FindObjectsByType<SpriteMask>(FindObjectsSortMode.None);
+        foreach (var mask in spriteMasks)
+        {
+            mask.enabled = false;
+        }
+
+        var cameras = FindObjectsByType<Camera>(FindObjectsSortMode.None);
+        foreach (var camera in cameras)
+        {
+            camera.allowHDR = false;
+            camera.allowMSAA = false;
+        }
+
+        var animators = FindObjectsByType<Animator>(FindObjectsSortMode.None);
+        foreach (var animator in animators)
+        {
+            animator.cullingMode = AnimatorCullingMode.CullCompletely;
+        }
+
+        var projectors = FindObjectsByType<Projector>(FindObjectsSortMode.None);
+        foreach (var projector in projectors)
+        {
+            projector.enabled = false;
+        }
+
+        var lensFlares = FindObjectsByType<LensFlare>(FindObjectsSortMode.None);
+        foreach (var flare in lensFlares)
+        {
+            flare.enabled = false;
+        }
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+}

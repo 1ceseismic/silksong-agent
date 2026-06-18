@@ -1,0 +1,7425 @@
+{
+  "name": "Control",
+  "gameObject": "Lace Boss1",
+  "scene": "bone_east_12",
+  "bundle": "scenes_scenes_scenes",
+  "path_id": 6175,
+  "num_states": 132,
+  "start_state": "Pause",
+  "variables": {
+    "Centre X": {
+      "type": "float",
+      "value": 93.77999877929688
+    },
+    "Counter Pause": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Distance": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Gravity": {
+      "type": "float",
+      "value": 2.0
+    },
+    "Hero Y": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Land Y": {
+      "type": "float",
+      "value": 7.598696231842041
+    },
+    "Self X": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Stun Timer": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Target Distance": {
+      "type": "float",
+      "value": 0.0
+    },
+    "X Scale": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Lava Pos Y": {
+      "type": "float",
+      "value": 0.0
+    },
+    "Ct Charge": {
+      "type": "int",
+      "value": 0
+    },
+    "Ct Combo": {
+      "type": "int",
+      "value": 0
+    },
+    "Ct CrossSlash": {
+      "type": "int",
+      "value": 0
+    },
+    "Ct Evade": {
+      "type": "int",
+      "value": 0
+    },
+    "Ct J Slash": {
+      "type": "int",
+      "value": 0
+    },
+    "Evade Attempts": {
+      "type": "int",
+      "value": 0
+    },
+    "Hops": {
+      "type": "int",
+      "value": 0
+    },
+    "Invincibility Direction": {
+      "type": "int",
+      "value": 0
+    },
+    "Ms Charge": {
+      "type": "int",
+      "value": 0
+    },
+    "Ms Combo": {
+      "type": "int",
+      "value": 0
+    },
+    "Ms Evade": {
+      "type": "int",
+      "value": 0
+    },
+    "Ms J Slash": {
+      "type": "int",
+      "value": 0
+    },
+    "Rage HP": {
+      "type": "int",
+      "value": 0
+    },
+    "Counter Range": {
+      "type": "bool",
+      "value": 0
+    },
+    "Counter Ready": {
+      "type": "bool",
+      "value": 0
+    },
+    "CrossSlashing Hero": {
+      "type": "bool",
+      "value": 0
+    },
+    "Do Pose": {
+      "type": "bool",
+      "value": 0
+    },
+    "Facing Right": {
+      "type": "bool",
+      "value": 0
+    },
+    "Hero Is Right": {
+      "type": "bool",
+      "value": 0
+    },
+    "Hornet Dead": {
+      "type": "bool",
+      "value": 0
+    },
+    "Lace Is Right": {
+      "type": "bool",
+      "value": 0
+    },
+    "Needolin Fight": {
+      "type": "bool",
+      "value": 0
+    },
+    "Right Side": {
+      "type": "bool",
+      "value": 0
+    },
+    "Will Counter": {
+      "type": "bool",
+      "value": 0
+    },
+    "Will CrossSlash": {
+      "type": "bool",
+      "value": 0
+    },
+    "Bind Bell Hit": {
+      "type": "bool",
+      "value": 0
+    },
+    "NPC Blocked Hit": {
+      "type": "bool",
+      "value": 0
+    },
+    "Dormant Block": {
+      "type": "bool",
+      "value": 0
+    },
+    "Above Wallcling Min": {
+      "type": "bool",
+      "value": 0
+    },
+    "Not Above Hero": {
+      "type": "bool",
+      "value": 0
+    },
+    "Wall Ahead": {
+      "type": "bool",
+      "value": 0
+    },
+    "Below Ground": {
+      "type": "bool",
+      "value": 0
+    },
+    "Next Event": {
+      "type": "string",
+      "value": ""
+    },
+    "CS Lace Pos": {
+      "type": "vector3",
+      "value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    "Multihit Pos": {
+      "type": "vector3",
+      "value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    }
+  },
+  "events": [
+    {
+      "name": "FINISHED",
+      "isGlobal": false
+    },
+    {
+      "name": "ATTACK",
+      "isGlobal": false
+    },
+    {
+      "name": "BIND BELL",
+      "isGlobal": false
+    },
+    {
+      "name": "BLOCKED HIT",
+      "isGlobal": true
+    },
+    {
+      "name": "CANCEL",
+      "isGlobal": false
+    },
+    {
+      "name": "CHARGE",
+      "isGlobal": true
+    },
+    {
+      "name": "CLOSE",
+      "isGlobal": false
+    },
+    {
+      "name": "COMBO",
+      "isGlobal": false
+    },
+    {
+      "name": "CONVO_END",
+      "isGlobal": false
+    },
+    {
+      "name": "COUNTER",
+      "isGlobal": false
+    },
+    {
+      "name": "CROSS SLASH",
+      "isGlobal": false
+    },
+    {
+      "name": "DOCKS",
+      "isGlobal": false
+    },
+    {
+      "name": "END",
+      "isGlobal": false
+    },
+    {
+      "name": "ENTER",
+      "isGlobal": false
+    },
+    {
+      "name": "EVADE",
+      "isGlobal": true
+    },
+    {
+      "name": "FAR",
+      "isGlobal": false
+    },
+    {
+      "name": "GROTTO",
+      "isGlobal": false
+    },
+    {
+      "name": "HERO COLLIDE",
+      "isGlobal": false
+    },
+    {
+      "name": "HOP END",
+      "isGlobal": false
+    },
+    {
+      "name": "HORNET DEAD",
+      "isGlobal": false
+    },
+    {
+      "name": "J SLASH",
+      "isGlobal": false
+    },
+    {
+      "name": "LAND",
+      "isGlobal": true
+    },
+    {
+      "name": "LEAN",
+      "isGlobal": false
+    },
+    {
+      "name": "MEET",
+      "isGlobal": true
+    },
+    {
+      "name": "MULTI HIT CONNECT",
+      "isGlobal": true
+    },
+    {
+      "name": "NEXT",
+      "isGlobal": false
+    },
+    {
+      "name": "RANGE IN",
+      "isGlobal": false
+    },
+    {
+      "name": "RANGE OUT",
+      "isGlobal": false
+    },
+    {
+      "name": "REFIGHT",
+      "isGlobal": false
+    },
+    {
+      "name": "REMEET",
+      "isGlobal": false
+    },
+    {
+      "name": "SING",
+      "isGlobal": true
+    },
+    {
+      "name": "SING DURATION END",
+      "isGlobal": true
+    },
+    {
+      "name": "STUN",
+      "isGlobal": false
+    },
+    {
+      "name": "SWISH",
+      "isGlobal": false
+    },
+    {
+      "name": "TOOK DAMAGE",
+      "isGlobal": true
+    },
+    {
+      "name": "UPRIGHT",
+      "isGlobal": false
+    },
+    {
+      "name": "WAIT",
+      "isGlobal": true
+    },
+    {
+      "name": "LAVA DAMAGE",
+      "isGlobal": false
+    },
+    {
+      "name": "WALL",
+      "isGlobal": false
+    }
+  ],
+  "global_transitions": [
+    {
+      "event": "STUN",
+      "to": "Stun Start"
+    },
+    {
+      "event": "LAVA DAMAGE",
+      "to": "Lava Damage"
+    }
+  ],
+  "states": [
+    {
+      "index": 0,
+      "name": "Init",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Use Wall Range?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "GetOwner",
+          "enabled": true
+        },
+        {
+          "name": "GetHP",
+          "enabled": true,
+          "params": {
+            "storeValue": "$Rage HP"
+          }
+        },
+        {
+          "name": "MultiplyIntByFloat",
+          "enabled": true,
+          "params": {
+            "integer": "$Rage HP",
+            "multiplyFloat": 0.5,
+            "storeResult": "$Rage HP"
+          }
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "GetParent",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "FindAlertRange",
+          "enabled": true
+        },
+        {
+          "name": "FindNamedChild",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "Idle",
+      "transitions": [
+        {
+          "event": "ATTACK",
+          "to": "CrossSlash?"
+        },
+        {
+          "event": "TOOK DAMAGE",
+          "to": "CrossSlash?"
+        },
+        {
+          "event": "COUNTER",
+          "to": "Counter Antic"
+        },
+        {
+          "event": "RANGE OUT",
+          "to": "Evade 2"
+        },
+        {
+          "event": "SING",
+          "to": "Sing Antic"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.75,
+            "finishEvent": "ATTACK"
+          }
+        },
+        {
+          "name": "FaceObjectV4",
+          "enabled": true,
+          "params": {
+            "SpriteFacesRight": true,
+            "StoreDuration": 0.0
+          }
+        },
+        {
+          "name": "GetDistance",
+          "enabled": true,
+          "params": {
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "EaseFloat",
+          "enabled": true,
+          "params": {
+            "fromValue": 0.0,
+            "toValue": 1.0,
+            "floatVariable": "$Counter Pause",
+            "time": 1.0,
+            "speed": 0.0,
+            "delay": 0.0,
+            "reverse": false,
+            "finishEvent": ""
+          }
+        },
+        {
+          "name": "FloatTestToBool",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": 6.0,
+            "tolerance": 0.0,
+            "equalBool": false,
+            "lessThanBool": "$Counter Range",
+            "greaterThanBool": false
+          }
+        },
+        {
+          "name": "FloatTestToBool",
+          "enabled": true,
+          "params": {
+            "float1": "$Counter Pause",
+            "float2": 0.25,
+            "tolerance": 0.0,
+            "equalBool": false,
+            "lessThanBool": false,
+            "greaterThanBool": "$Counter Ready"
+          }
+        },
+        {
+          "name": "BoolAllTrue",
+          "enabled": true,
+          "params": {
+            "sendEvent": "COUNTER",
+            "storeResult": false
+          }
+        },
+        {
+          "name": "CheckAlertRange",
+          "enabled": true,
+          "params": {
+            "storeResult": false,
+            "InRangeEvent": "",
+            "InRangeDelay": 0.0,
+            "OutOfRangeEvent": "RANGE OUT",
+            "OutOfRangeDelay": 0.0
+          }
+        },
+        {
+          "name": "CheckHeroPerformanceRegionV2",
+          "enabled": true,
+          "params": {
+            "Radius": 0.0,
+            "MinReactDelay": 0.20000000298023224,
+            "MaxReactDelay": 0.20000000298023224,
+            "None": "",
+            "ActiveInner": "SING",
+            "ActiveOuter": "",
+            "IgnoreNeedolinRange": true,
+            "UseActiveBool": false,
+            "ActiveBool": false
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "ATTACK"
+          }
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "Charge Antic",
+      "transitions": [
+        {
+          "event": "NEXT",
+          "to": "Charge Break"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": -32.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.824999988079071,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.20000000298023224,
+            "finishEvent": "NEXT"
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Charge",
+      "transitions": [
+        {
+          "event": "NEXT",
+          "to": "Charge Recover"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 80.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.30000001192092896,
+            "finishEvent": "NEXT"
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.8899999856948853,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "SetParticleEmission",
+          "enabled": true,
+          "params": {
+            "emission": true
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Charge Recover",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Will Counter?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.875,
+            "decelerationY": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "J Slash Antic",
+      "transitions": [
+        {
+          "event": "NEXT",
+          "to": "J Slash 1"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.6499999761581421,
+            "finishEvent": "NEXT"
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "J Slash 1",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "J Slash 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "SetGravity2dScale",
+          "enabled": true,
+          "params": {
+            "gravityScale": 0.0
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 60.0,
+            "ySpeed": 87.0
+          }
+        },
+        {
+          "name": "DecelerateV2",
+          "enabled": true,
+          "params": {
+            "deceleration": 0.824999988079071
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "name": "Downstab Antic",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Downstab"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "DecelerateV2",
+          "enabled": true,
+          "params": {
+            "deceleration": 0.824999988079071
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "name": "J Slash 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "J Slash 3"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "DecelerateV2",
+          "enabled": true,
+          "params": {
+            "deceleration": 0.824999988079071
+          }
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "name": "J Slash 3",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "J Slash 4"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "DecelerateV2",
+          "enabled": true,
+          "params": {
+            "deceleration": 0.824999988079071
+          }
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "name": "J Slash 4",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Dstab Constrain?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "DecelerateV2",
+          "enabled": true,
+          "params": {
+            "deceleration": 0.824999988079071
+          }
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "name": "Downstab",
+      "transitions": [
+        {
+          "event": "LAND",
+          "to": "Downstab Land"
+        },
+        {
+          "event": "WALL",
+          "to": "Wallcling"
+        }
+      ],
+      "actions": [
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true,
+          "params": {
+            "animLibName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "clipName": {
+              "x": 1.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 45.0,
+            "ySpeed": -45.0
+          }
+        },
+        {
+          "name": "CheckYPosition",
+          "enabled": false,
+          "params": {
+            "compareTo": "$Land Y",
+            "compareToOffset": 0.0,
+            "tolerance": 0.0,
+            "equal": "LAND",
+            "lessThan": "LAND",
+            "greaterThan": "",
+            "activeBool": false
+          }
+        },
+        {
+          "name": "CheckIsCharacterGrounded",
+          "enabled": true,
+          "params": {
+            "RayCount": 3,
+            "GroundDistance": 0.20000000298023224,
+            "SkinWidth": -0.05000000074505806,
+            "SkinHeight": 0.10000000149011612,
+            "StoreResult": false,
+            "GroundedEvent": "LAND",
+            "NotGroundedEvent": ""
+          }
+        },
+        {
+          "name": "CheckCollisionSideEnter",
+          "enabled": true,
+          "params": {
+            "topHit": false,
+            "rightHit": false,
+            "bottomHit": false,
+            "leftHit": false,
+            "topHitEvent": "",
+            "rightHitEvent": "",
+            "bottomHitEvent": "LAND",
+            "leftHitEvent": "",
+            "ignoreTriggers": false
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "RayCast2dV2",
+          "enabled": true,
+          "params": {
+            "distance": 1.0,
+            "minDepth": 0,
+            "maxDepth": 0,
+            "hitEvent": "",
+            "noHitEvent": "",
+            "storeDidHit": "$Wall Ahead",
+            "storeHitDistance": 0.0,
+            "storeDistance": 0.0,
+            "repeatInterval": 1,
+            "invertMask": false,
+            "ignoreTriggers": false,
+            "debugColor": "Self",
+            "debug": false
+          }
+        },
+        {
+          "name": "CheckTargetDirection",
+          "enabled": true,
+          "params": {
+            "aboveEvent": "",
+            "belowEvent": "",
+            "rightEvent": "",
+            "leftEvent": "",
+            "aboveBool": "$Not Above Hero",
+            "belowBool": false,
+            "rightBool": false,
+            "leftBool": false,
+            "selfOffsetX": 0.0,
+            "selfOffsetY": -0.75
+          }
+        },
+        {
+          "name": "BoolAllTrue",
+          "enabled": true,
+          "params": {
+            "sendEvent": "WALL",
+            "storeResult": false
+          }
+        },
+        {
+          "name": "CheckYPositionV2",
+          "enabled": true,
+          "params": {
+            "compareTo": "$Land Y",
+            "compareToOffset": 0.0,
+            "tolerance": 0.0,
+            "equal": "",
+            "equalBool": false,
+            "lessThan": "",
+            "lessThanBool": "$Below Ground",
+            "greaterThan": "",
+            "greaterThanBool": false,
+            "activeBool": false
+          }
+        },
+        {
+          "name": "BoolAllTrue",
+          "enabled": true,
+          "params": {
+            "sendEvent": "WALL",
+            "storeResult": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "name": "Downstab Land",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Will Counter?"
+        },
+        {
+          "event": "WALL",
+          "to": "Wallcling"
+        }
+      ],
+      "actions": [
+        {
+          "name": "GetPosition2d",
+          "enabled": true,
+          "params": {
+            "x": "$Self X",
+            "y": 0.0
+          }
+        },
+        {
+          "name": "FloatInRange",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Self X",
+            "lowerValue": 81.0,
+            "upperValue": 107.0,
+            "boolVariable": false,
+            "trueEvent": "",
+            "falseEvent": "WALL"
+          }
+        },
+        {
+          "name": "SetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": "$Land Y",
+            "z": 0.0
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SetGravity2dScale",
+          "enabled": true,
+          "params": {
+            "gravityScale": "$Gravity"
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "clipName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.800000011920929,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "SetParticleEmission",
+          "enabled": true,
+          "params": {
+            "emission": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "name": "Counter Antic",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Counter Dir"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Will Counter",
+            "boolValue": false
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "name": "Counter Stance",
+      "transitions": [
+        {
+          "event": "END",
+          "to": "Counter End"
+        },
+        {
+          "event": "BLOCKED HIT",
+          "to": "Counter Hit"
+        }
+      ],
+      "actions": [
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SetInvincible",
+          "enabled": true,
+          "params": {
+            "Invincible": true,
+            "InvincibleFromDirection": "$Invincibility Direction"
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.75,
+            "finishEvent": "END"
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "name": "Counter End",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "name": "Counter Hit",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "RapidSlash Charge"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "name": "RapidSlash Charge",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "RapidSlash Loop"
+        },
+        {
+          "event": "HERO COLLIDE",
+          "to": "Collide To Multihit"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 19.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 0
+          }
+        },
+        {
+          "name": "Trigger2dEventLayer",
+          "enabled": true,
+          "params": {
+            "collideLayer": 20,
+            "sendEvent": "HERO COLLIDE"
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "name": "RapidSlash Loop",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "RapidSlash End"
+        },
+        {
+          "event": "MULTI HIT CONNECT",
+          "to": "Hero Facing"
+        }
+      ],
+      "actions": [
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.75,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.6499999761581421,
+            "finishEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SendEventByNameV2",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "SetPolygonCollider",
+          "enabled": true,
+          "params": {
+            "active": true
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "name": "RapidSlash End",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 1
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": false
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "name": "ComboSlash 1",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "ComboSlash 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "name": "ComboSlash 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "ComboSlash 3"
+        }
+      ],
+      "actions": [
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObjectDelay",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "delay": 0.04100000113248825
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 30.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "SetParticleEmission",
+          "enabled": true,
+          "params": {
+            "emission": true
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "name": "ComboSlash 3",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "ComboSlash 4"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": false,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.800000011920929,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "name": "ComboSlash 4",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "ComboSlash 5"
+        }
+      ],
+      "actions": [
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObjectDelay",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "delay": 0.04100000113248825
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 30.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "SetParticleEmission",
+          "enabled": true,
+          "params": {
+            "emission": true
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "name": "ComboSlash 5",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Will Counter?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": false,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.800000011920929,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "name": "Distance Check",
+      "transitions": [
+        {
+          "event": "CLOSE",
+          "to": "Close"
+        },
+        {
+          "event": "FAR",
+          "to": "Far"
+        },
+        {
+          "event": "SING",
+          "to": "Sing Antic"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CheckHeroPerformanceRegionV2",
+          "enabled": true,
+          "params": {
+            "Radius": 0.0,
+            "MinReactDelay": 0.0,
+            "MaxReactDelay": 0.0,
+            "None": "",
+            "ActiveInner": "SING",
+            "ActiveOuter": "",
+            "IgnoreNeedolinRange": true,
+            "UseActiveBool": false,
+            "ActiveBool": false
+          }
+        },
+        {
+          "name": "GetDistance",
+          "enabled": true,
+          "params": {
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": 6.0,
+            "tolerance": 0.0,
+            "equal": "CLOSE",
+            "lessThan": "CLOSE",
+            "greaterThan": "FAR"
+          }
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "name": "Close",
+      "transitions": [
+        {
+          "event": "EVADE",
+          "to": "Evade"
+        },
+        {
+          "event": "COUNTER",
+          "to": "Counter Antic"
+        },
+        {
+          "event": "J SLASH",
+          "to": "Charge Antic"
+        },
+        {
+          "event": "COMBO",
+          "to": "ComboSlash 1"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CheckAlertRange",
+          "enabled": true,
+          "params": {
+            "storeResult": false,
+            "InRangeEvent": "J SLASH",
+            "InRangeDelay": 0.0,
+            "OutOfRangeEvent": "",
+            "OutOfRangeDelay": 0.0
+          }
+        },
+        {
+          "name": "SendRandomEventV3",
+          "enabled": true,
+          "params": {
+            "events": [
+              "EVADE",
+              "COMBO",
+              "J SLASH"
+            ],
+            "weights": [
+              1.0,
+              1.0,
+              1.0,
+              "?",
+              "$Ct Evade",
+              "$Ct Combo",
+              "$Ct J Slash"
+            ],
+            "eventMax": [
+              2,
+              2,
+              2,
+              "?",
+              "$Ms Evade",
+              "$Ms Combo",
+              "$Ms J Slash"
+            ],
+            "missedMax": [
+              4,
+              4,
+              4,
+              5
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "name": "Far",
+      "transitions": [
+        {
+          "event": "CHARGE",
+          "to": "Hop To Charge"
+        },
+        {
+          "event": "J SLASH",
+          "to": "Hop To J Slash"
+        },
+        {
+          "event": "COMBO",
+          "to": "Hop To Combo"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetIntValue",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Hops",
+            "intValue": 0
+          }
+        },
+        {
+          "name": "CheckAlertRange",
+          "enabled": true,
+          "params": {
+            "storeResult": false,
+            "InRangeEvent": "J SLASH",
+            "InRangeDelay": 0.0,
+            "OutOfRangeEvent": "",
+            "OutOfRangeDelay": 0.0
+          }
+        },
+        {
+          "name": "SendRandomEventV3",
+          "enabled": true,
+          "params": {
+            "events": [
+              "COMBO",
+              "CHARGE",
+              "J SLASH"
+            ],
+            "weights": [
+              1.0,
+              1.0,
+              1.0,
+              "?",
+              "$Ct Combo",
+              "$Ct Charge",
+              "$Ct J Slash"
+            ],
+            "eventMax": [
+              2,
+              1,
+              2,
+              "?",
+              "$Ms Combo",
+              "$Ms Charge",
+              "$Ms J Slash"
+            ],
+            "missedMax": [
+              4,
+              4,
+              4
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "name": "Evade",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Evade Recover"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": -30.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "name": "Evade Recover",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Evade Move"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "name": "Evade Move",
+      "transitions": [
+        {
+          "event": "J SLASH",
+          "to": "J Slash Antic"
+        },
+        {
+          "event": "CHARGE",
+          "to": "Charge Antic"
+        },
+        {
+          "event": "COMBO",
+          "to": "Hop To Combo"
+        },
+        {
+          "event": "CROSS SLASH",
+          "to": "CrossSlash Aim"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Will CrossSlash",
+            "isTrue": "CROSS SLASH",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "SendRandomEvent",
+          "enabled": true,
+          "params": {
+            "events": [
+              "COMBO",
+              "CHARGE",
+              "J SLASH"
+            ],
+            "weights": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "eventMax": [],
+            "missedMax": []
+          }
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "name": "Hop Check",
+      "transitions": [
+        {
+          "event": "HOP END",
+          "to": "Hop End"
+        },
+        {
+          "event": "FINISHED",
+          "to": "Hop Antic"
+        }
+      ],
+      "actions": [
+        {
+          "name": "GetXDistance",
+          "enabled": true,
+          "params": {
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": "$Target Distance",
+            "tolerance": 0.0,
+            "equal": "HOP END",
+            "lessThan": "HOP END",
+            "greaterThan": ""
+          }
+        },
+        {
+          "name": "CheckAlertRange",
+          "enabled": true,
+          "params": {
+            "storeResult": false,
+            "InRangeEvent": "FINISHED",
+            "InRangeDelay": 0.0,
+            "OutOfRangeEvent": "",
+            "OutOfRangeDelay": 0.0
+          }
+        },
+        {
+          "name": "IntCompare",
+          "enabled": true,
+          "params": {
+            "integer1": "$Hops",
+            "integer2": 3,
+            "equal": "",
+            "lessThan": "",
+            "greaterThan": "HOP END"
+          }
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "name": "Hop To Charge",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hop Check"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetFloatValue",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Target Distance",
+            "floatValue": 16.0
+          }
+        },
+        {
+          "name": "SetStringValue",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "name": "Hop To J Slash",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hop Check"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetFloatValue",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Target Distance",
+            "floatValue": 12.0
+          }
+        },
+        {
+          "name": "SetStringValue",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "name": "Hop To Combo",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hop Check"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetFloatValue",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Target Distance",
+            "floatValue": 9.25
+          }
+        },
+        {
+          "name": "SetStringValue",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "name": "Hop End",
+      "transitions": [
+        {
+          "event": "CHARGE",
+          "to": "Charge Antic"
+        },
+        {
+          "event": "J SLASH",
+          "to": "J Slash Antic"
+        },
+        {
+          "event": "COMBO",
+          "to": "ComboSlash 1"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "name": "Hop Antic",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hop"
+        }
+      ],
+      "actions": [
+        {
+          "name": "IntAdd",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Hops",
+            "add": 1
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "name": "Hop",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hop Recover"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 24.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "name": "Hop Recover",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hop Check"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.75,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "name": "Will Counter?",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendRandomEvent",
+          "enabled": true,
+          "params": {
+            "events": [
+              "",
+              "FINISHED"
+            ],
+            "weights": [
+              0.33000001311302185,
+              0.6600000262260437,
+              0.0
+            ],
+            "eventMax": [],
+            "missedMax": []
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Will Counter",
+            "boolValue": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "name": "Dormant",
+      "transitions": [
+        {
+          "event": "ENTER",
+          "to": "Scene Start"
+        },
+        {
+          "event": "BLOCKED HIT",
+          "to": "Block Voice"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": true
+          }
+        },
+        {
+          "name": "SetLayer",
+          "enabled": true
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "SetRandomAudioClipFromTable",
+          "enabled": true,
+          "params": {
+            "AutoPlay": true,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ReceivedDamage",
+          "enabled": true,
+          "params": {
+            "sendEvent": "BLOCKED HIT",
+            "sendEventHeavy": "",
+            "sendEventSpikes": "",
+            "sendEventLava": "",
+            "sendEventLightning": "",
+            "ignoreAcid": false,
+            "ignoreLava": false,
+            "ignoreWater": false,
+            "ignoreHunterWeapon": false,
+            "ignoreTraps": false,
+            "ignoreNail": false,
+            "ignoreSpikes": false,
+            "storeDamageDealt": 0,
+            "storeDirection": 0.0,
+            "storeMagnitudeMultiplier": 0.0,
+            "firstHitOnly": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "name": "Encountered?",
+      "transitions": [
+        {
+          "event": "MEET",
+          "to": "Take Control"
+        },
+        {
+          "event": "REFIGHT",
+          "to": "Refight"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "isTrue": "REFIGHT",
+            "isFalse": "MEET"
+          }
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "name": "Take Control",
+      "transitions": [
+        {
+          "event": "LAND",
+          "to": "Wait"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Dormant Block",
+            "isTrue": "LAND",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "TransitionToAudioSnapshot",
+          "enabled": true,
+          "params": {
+            "transitionTime": 6.0
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "ClampPosition",
+          "enabled": false,
+          "params": {
+            "minX": 0.0,
+            "maxX": 92.75,
+            "minY": 0.0,
+            "maxY": 0.0,
+            "minZ": 0.0,
+            "maxZ": 0.0
+          }
+        },
+        {
+          "name": "RunFSM",
+          "enabled": true,
+          "params": {
+            "finishEvent": "LAND"
+          }
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "name": "Scene Start",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Location Check"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "name": "Convo 1",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Conduct End"
+        }
+      ],
+      "actions": [
+        {
+          "name": "AudioStopV2",
+          "enabled": true,
+          "params": {
+            "fadeTime": 0.0
+          }
+        },
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": true,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "name": "Convo 2",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Convo 3"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "name": "Convo 4",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "End Dialogue"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": true,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "name": "Start Battle",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Evade"
+        }
+      ],
+      "actions": [
+        {
+          "name": "TransitionToAudioSnapshot",
+          "enabled": true,
+          "params": {
+            "transitionTime": 0.0
+          }
+        },
+        {
+          "name": "ApplyMusicCue",
+          "enabled": true,
+          "params": {
+            "delayTime": 0.0,
+            "transitionTime": 0.0
+          }
+        },
+        {
+          "name": "SetInvincible",
+          "enabled": true,
+          "params": {
+            "Invincible": false,
+            "InvincibleFromDirection": 0
+          }
+        },
+        {
+          "name": "DisplayBossTitle",
+          "enabled": true,
+          "params": {
+            "displayRight": true
+          }
+        },
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": false
+          }
+        },
+        {
+          "name": "SetLayer",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "name": "End Dialogue",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "End Dialogue 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": false
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWait",
+          "enabled": true,
+          "params": {
+            "AnimationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "EndDialogue",
+          "enabled": true,
+          "params": {
+            "ReturnControl": false,
+            "ReturnHUD": true,
+            "UseChildren": false
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.30000001192092896,
+            "finishEvent": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "name": "Refight",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Start Battle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "AudioPlayRandomVoiceFromTable",
+          "enabled": true,
+          "params": {
+            "pitchOffset": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "AudioStopV2",
+          "enabled": true,
+          "params": {
+            "fadeTime": 0.0
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.15000000596046448,
+            "finishEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "name": "Stun Start",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Stun Air"
+        }
+      ],
+      "actions": [
+        {
+          "name": "AudioStop",
+          "enabled": true,
+          "params": {
+            "fadeTime": 0.0
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SetRecoilSpeed",
+          "enabled": true,
+          "params": {
+            "newRecoilSpeed": 7.0
+          }
+        },
+        {
+          "name": "SetFloatValue",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Stun Timer",
+            "floatValue": 2.0
+          }
+        },
+        {
+          "name": "SetGravity2dScale",
+          "enabled": true,
+          "params": {
+            "gravityScale": "$Gravity"
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "objectB": {
+              "x": 0.0,
+              "y": -0.6100000143051147,
+              "z": 0.0
+            },
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": -6.0,
+            "ySpeed": 23.0
+          }
+        },
+        {
+          "name": "NextFrameEvent",
+          "enabled": true,
+          "params": {
+            "sendEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "SetPolygonCollider",
+          "enabled": true,
+          "params": {
+            "active": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "SetHitEffectOrigin",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "name": "Stun Air",
+      "transitions": [
+        {
+          "event": "LAND",
+          "to": "Stun Land"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CheckCollisionSideEnter",
+          "enabled": true,
+          "params": {
+            "topHit": false,
+            "rightHit": false,
+            "bottomHit": false,
+            "leftHit": false,
+            "topHitEvent": "",
+            "rightHitEvent": "",
+            "bottomHitEvent": "LAND",
+            "leftHitEvent": "",
+            "ignoreTriggers": false
+          }
+        },
+        {
+          "name": "CheckCollisionSide",
+          "enabled": true,
+          "params": {
+            "topHit": false,
+            "rightHit": false,
+            "bottomHit": false,
+            "leftHit": false,
+            "topHitEvent": "",
+            "rightHitEvent": "",
+            "bottomHitEvent": "LAND",
+            "leftHitEvent": "",
+            "ignoreTriggers": false
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 0
+          }
+        },
+        {
+          "name": "SetSpecialDeath",
+          "enabled": true,
+          "params": {
+            "hasSpecialDeath": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "name": "Stunned",
+      "transitions": [
+        {
+          "event": "END",
+          "to": "Stun Recover"
+        },
+        {
+          "event": "TOOK DAMAGE",
+          "to": "Stun Damage"
+        },
+        {
+          "event": "SING",
+          "to": "Sing Antic"
+        }
+      ],
+      "actions": [
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.8500000238418579,
+            "decelerationY": 0.0
+          }
+        },
+        {
+          "name": "FloatAdd",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Stun Timer",
+            "add": -1.0
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Stun Timer",
+            "float2": 0.0,
+            "tolerance": 0.0,
+            "equal": "END",
+            "lessThan": "END",
+            "greaterThan": ""
+          }
+        },
+        {
+          "name": "CheckHeroPerformanceRegion",
+          "enabled": true,
+          "params": {
+            "MinReactDelay": 0.5,
+            "MaxReactDelay": 0.5,
+            "None": "",
+            "ActiveInner": "SING",
+            "ActiveOuter": "",
+            "IgnoreNeedolinRange": false,
+            "ActiveBool": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "name": "Stun Recover",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetRecoilSpeed",
+          "enabled": true,
+          "params": {
+            "newRecoilSpeed": 15.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": false
+          }
+        },
+        {
+          "name": "AudioStop",
+          "enabled": true,
+          "params": {
+            "fadeTime": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "name": "CrossSlash Antic",
+      "transitions": [
+        {
+          "event": "ATTACK",
+          "to": "CrossSlash"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetIntValue",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Evade Attempts",
+            "intValue": 0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "RandomInt",
+          "enabled": true,
+          "params": {
+            "min": 2,
+            "max": 4,
+            "storeResult": "$Ct CrossSlash",
+            "noRepeat": false
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SetRecoilSpeed",
+          "enabled": true,
+          "params": {
+            "newRecoilSpeed": 0.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.8999999761581421,
+            "finishEvent": "ATTACK"
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "name": "CrossSlash",
+      "transitions": [
+        {
+          "event": "NEXT",
+          "to": "Finish Multihit"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": true
+          }
+        },
+        {
+          "name": "SetSpecialDeath",
+          "enabled": true,
+          "params": {
+            "hasSpecialDeath": true
+          }
+        },
+        {
+          "name": "SetMeshRenderer",
+          "enabled": true,
+          "params": {
+            "active": false
+          }
+        },
+        {
+          "name": "SetCollider",
+          "enabled": true,
+          "params": {
+            "active": false
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.800000011920929,
+            "finishEvent": "NEXT"
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "spawnPoint": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "SetPositionToObject2D",
+          "enabled": true,
+          "params": {
+            "xOffset": 0.0,
+            "yOffset": 0.0
+          }
+        },
+        {
+          "name": "GetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "SetHitEffectOrigin",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "name": "Slash Slam",
+      "transitions": [
+        {
+          "event": "NEXT",
+          "to": "Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Translate",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": -0.30000001192092896,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.009999999776482582
+          }
+        },
+        {
+          "name": "SetRecoilSpeed",
+          "enabled": true,
+          "params": {
+            "newRecoilSpeed": 15.0
+          }
+        },
+        {
+          "name": "SetSpecialDeath",
+          "enabled": true,
+          "params": {
+            "hasSpecialDeath": false
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "NEXT"
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": false
+          }
+        },
+        {
+          "name": "SetMeshRenderer",
+          "enabled": true,
+          "params": {
+            "active": true
+          }
+        },
+        {
+          "name": "SetCollider",
+          "enabled": true,
+          "params": {
+            "active": true
+          }
+        },
+        {
+          "name": "SetPositionToObject",
+          "enabled": true,
+          "params": {
+            "xOffset": 0.0,
+            "yOffset": 0.0,
+            "zOffset": 0.0,
+            "overrideZ": 0.0
+          }
+        },
+        {
+          "name": "PlayParticleEmitterChildren",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "name": "CrossSlash?",
+      "transitions": [
+        {
+          "event": "CROSS SLASH",
+          "to": "CrossSlash Aim"
+        },
+        {
+          "event": "FINISHED",
+          "to": "Distance Check"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendEvent",
+          "enabled": false,
+          "params": {
+            "sendEvent": "CROSS SLASH",
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "CompareHP",
+          "enabled": true,
+          "params": {
+            "integer2": "$Rage HP",
+            "equal": "",
+            "lessThan": "",
+            "greaterThan": "FINISHED"
+          }
+        },
+        {
+          "name": "IntCompare",
+          "enabled": true,
+          "params": {
+            "integer1": "$Ct CrossSlash",
+            "integer2": 0,
+            "equal": "CROSS SLASH",
+            "lessThan": "CROSS SLASH",
+            "greaterThan": ""
+          }
+        },
+        {
+          "name": "IntAdd",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Ct CrossSlash",
+            "add": -1
+          }
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "name": "CrossSlash Aim",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "CrossSlash Antic"
+        },
+        {
+          "event": "EVADE",
+          "to": "CS Evade"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Will CrossSlash",
+            "boolValue": false
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "objectB": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "GetXDistance",
+          "enabled": true,
+          "params": {
+            "target": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": 6.0,
+            "tolerance": 0.0,
+            "equal": "",
+            "lessThan": "EVADE",
+            "greaterThan": ""
+          }
+        },
+        {
+          "name": "GetPosition",
+          "enabled": true,
+          "params": {
+            "x": "$Self X",
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "FloatTestToBool",
+          "enabled": true,
+          "params": {
+            "float1": "$Self X",
+            "float2": "$Centre X",
+            "tolerance": 0.0,
+            "equalBool": false,
+            "lessThanBool": false,
+            "greaterThanBool": "$Right Side"
+          }
+        },
+        {
+          "name": "GetScale",
+          "enabled": true,
+          "params": {
+            "xScale": "$X Scale",
+            "yScale": 0.0,
+            "zScale": 0.0
+          }
+        },
+        {
+          "name": "FloatTestToBool",
+          "enabled": true,
+          "params": {
+            "float1": "$X Scale",
+            "float2": 0.0,
+            "tolerance": 0.0,
+            "equalBool": false,
+            "lessThanBool": false,
+            "greaterThanBool": "$Facing Right"
+          }
+        },
+        {
+          "name": "BoolTestMulti",
+          "enabled": true,
+          "params": {
+            "trueEvent": "EVADE",
+            "falseEvent": "",
+            "storeResult": false
+          }
+        },
+        {
+          "name": "BoolTestMulti",
+          "enabled": true,
+          "params": {
+            "trueEvent": "EVADE",
+            "falseEvent": "",
+            "storeResult": false
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "name": "CS Evade",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Evade"
+        },
+        {
+          "event": "END",
+          "to": "CS Evade Cancel"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Will CrossSlash",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "IntAdd",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Evade Attempts",
+            "add": 1
+          }
+        },
+        {
+          "name": "IntCompare",
+          "enabled": true,
+          "params": {
+            "integer1": "$Evade Attempts",
+            "integer2": 2,
+            "equal": "END",
+            "lessThan": "",
+            "greaterThan": "END"
+          }
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "name": "CS Evade Cancel",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "CrossSlash Antic"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetScale",
+          "enabled": true,
+          "params": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "GetPosition",
+          "enabled": true,
+          "params": {
+            "x": "$Self X",
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "spawnPoint": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0,
+            "storePlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Self X",
+            "float2": "$Centre X",
+            "tolerance": 0.0,
+            "equal": "",
+            "lessThan": "FINISHED",
+            "greaterThan": ""
+          }
+        },
+        {
+          "name": "SetScale",
+          "enabled": true,
+          "params": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "name": "Multihitting",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Multihit Slash"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "spawnPoint": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0,
+            "storePlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "DoCameraShake",
+          "enabled": true,
+          "params": {
+            "DoFreeze": true,
+            "Delay": 0.0
+          }
+        },
+        {
+          "name": "GetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "SetVector3XYZ",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.004000000189989805
+          }
+        },
+        {
+          "name": "AnimatePositionTo",
+          "enabled": true,
+          "params": {
+            "time": 0.15000000596046448,
+            "speed": 0.0,
+            "delay": 0.0,
+            "reverse": false,
+            "finishEvent": ""
+          }
+        },
+        {
+          "name": "PlayParticleEmitterInState",
+          "enabled": true
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.75,
+            "finishEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "name": "Multihit Slash",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Translate",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "CancelCameraShake",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "DamageHeroDirectly",
+          "enabled": true,
+          "params": {
+            "damageAmount": 1
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 1
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "boolValue": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "name": "Hero Facing",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Multihitting"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "CheckTargetDirection",
+          "enabled": true,
+          "params": {
+            "aboveEvent": "",
+            "belowEvent": "",
+            "rightEvent": "",
+            "leftEvent": "FINISHED",
+            "aboveBool": false,
+            "belowBool": false,
+            "rightBool": false,
+            "leftBool": false,
+            "selfOffsetX": 0.0,
+            "selfOffsetY": 0.0
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "name": "Collide To Multihit",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hero Facing"
+        },
+        {
+          "event": "CANCEL",
+          "to": "Collide Cancel"
+        },
+        {
+          "event": "BIND BELL",
+          "to": "Bind Bell Damage"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CallMethodProper",
+          "enabled": true
+        },
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Bind Bell Hit",
+            "isTrue": "BIND BELL",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "CanHeroTakeDamage",
+          "enabled": true,
+          "params": {
+            "canTakeDmgEvent": "",
+            "cannotTakeDmgEvent": "CANCEL"
+          }
+        },
+        {
+          "name": "CallMethodProper",
+          "enabled": true
+        },
+        {
+          "name": "SendEventToRegister",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByNameV2",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "name": "Pose",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        },
+        {
+          "event": "SWISH",
+          "to": "Pose Swish"
+        },
+        {
+          "event": "LEAN",
+          "to": "Pose Lean"
+        },
+        {
+          "event": "UPRIGHT",
+          "to": "Pose Upright"
+        },
+        {
+          "event": "HORNET DEAD",
+          "to": "Death Pose"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Hornet Dead",
+            "isTrue": "HORNET DEAD",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Do Pose",
+            "isTrue": "",
+            "isFalse": "FINISHED"
+          }
+        },
+        {
+          "name": "SendRandomEvent",
+          "enabled": true,
+          "params": {
+            "events": [
+              "SWISH",
+              "LEAN",
+              "UPRIGHT"
+            ],
+            "weights": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "eventMax": [],
+            "missedMax": []
+          }
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "name": "Finish Multihit",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Slash Slam"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetHitEffectOrigin",
+          "enabled": true
+        },
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$CrossSlashing Hero",
+            "isTrue": "",
+            "isFalse": "FINISHED"
+          }
+        },
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$CrossSlashing Hero",
+            "boolValue": false
+          }
+        },
+        {
+          "name": "SetMeshRenderer",
+          "enabled": true,
+          "params": {
+            "active": true
+          }
+        },
+        {
+          "name": "SetPositionToObject",
+          "enabled": true,
+          "params": {
+            "targetObject": {
+              "x": 0.0,
+              "y": -0.6100000143051147,
+              "z": 0.0
+            },
+            "xOffset": 0.0,
+            "yOffset": 0.75,
+            "zOffset": 0.0,
+            "overrideZ": 0.0
+          }
+        },
+        {
+          "name": "SetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.004000000189989805
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "DamageHeroDirectly",
+          "enabled": true,
+          "params": {
+            "damageAmount": 1
+          }
+        },
+        {
+          "name": "CancelCameraShake",
+          "enabled": true
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "name": "Stun Land",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Stunned"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true,
+          "params": {
+            "animLibName": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "name": "SetSpecialDeath",
+          "enabled": true,
+          "params": {
+            "hasSpecialDeath": false
+          }
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "SetAudioClip",
+          "enabled": true,
+          "params": {
+            "autoPlay": true,
+            "stopOnExit": false
+          }
+        },
+        {
+          "name": "AudioPlaySimple",
+          "enabled": false,
+          "params": {
+            "volume": 1.0
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 1
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "name": "Stun Damage",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Stunned"
+        },
+        {
+          "event": "END",
+          "to": "Damage Recover"
+        }
+      ],
+      "actions": [
+        {
+          "name": "AudioStop",
+          "enabled": true,
+          "params": {
+            "fadeTime": 0.0
+          }
+        },
+        {
+          "name": "PlayAudioEventRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "SpawnedPlayerRef": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayFrame",
+          "enabled": true,
+          "params": {
+            "frame": 0
+          }
+        },
+        {
+          "name": "FloatAdd",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Stun Timer",
+            "add": -0.25
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Stun Timer",
+            "float2": 0.0,
+            "tolerance": 0.0,
+            "equal": "END",
+            "lessThan": "END",
+            "greaterThan": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "name": "Damage Recover",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Stun Recover"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "name": "Charge Break",
+      "transitions": [
+        {
+          "event": "NEXT",
+          "to": "Charge"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.6000000238418579,
+            "finishEvent": "NEXT"
+          }
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "name": "Counter Dir",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Counter Stance"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetIntValue",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Invincibility Direction",
+            "intValue": 9
+          }
+        },
+        {
+          "name": "SendEventByScale",
+          "enabled": true,
+          "params": {
+            "positiveEvent": "FINISHED",
+            "negativeEvent": ""
+          }
+        },
+        {
+          "name": "SetIntValue",
+          "enabled": true,
+          "params": {
+            "intVariable": "$Invincibility Direction",
+            "intValue": 8
+          }
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "name": "Pose Swish",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Pose Swish 2"
+        },
+        {
+          "event": "CANCEL",
+          "to": "Pose Lean"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CheckAlertRangeByName",
+          "enabled": true,
+          "params": {
+            "storeResult": false
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "name": "Pose Lean",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "name": "Pose Upright",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "name": "Pose Swish 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "name": "Death Pose",
+      "transitions": [
+        {
+          "event": "EVADE",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "GetXDistance",
+          "enabled": true,
+          "params": {
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": 2.0,
+            "tolerance": 0.0,
+            "equal": "",
+            "lessThan": "EVADE",
+            "greaterThan": ""
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "name": "Trap Stun",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true,
+          "params": {
+            "animLibName": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "name": "Collide Cancel",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "RapidSlash Loop"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "name": "Wait",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Convo 1"
+        },
+        {
+          "event": "CANCEL",
+          "to": "Wait Shorter"
+        }
+      ],
+      "actions": [
+        {
+          "name": "HeroTurnToFace",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Dormant Block",
+            "isTrue": "CANCEL",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 2.0,
+            "finishEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "name": "Pause",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Init"
+        }
+      ],
+      "actions": [
+        {
+          "name": "NextFrameEvent",
+          "enabled": true,
+          "params": {
+            "sendEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "name": "Location Check",
+      "transitions": [
+        {
+          "event": "DOCKS",
+          "to": "Encountered?"
+        },
+        {
+          "event": "GROTTO",
+          "to": "Grotto Fight"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Needolin Fight",
+            "isTrue": "GROTTO",
+            "isFalse": "DOCKS"
+          }
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "name": "Grotto Fight",
+      "transitions": [
+        {
+          "event": "MEET",
+          "to": "Take Control New"
+        },
+        {
+          "event": "REFIGHT",
+          "to": "Grotto Refight"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FindAlertRange",
+          "enabled": true
+        },
+        {
+          "name": "SetFloatValue",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Land Y",
+            "floatValue": 8.539999961853027
+          }
+        },
+        {
+          "name": "SetFloatValue",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Centre X",
+            "floatValue": 39.65999984741211
+          }
+        },
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "isTrue": "REFIGHT",
+            "isFalse": "MEET"
+          }
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "name": "Take Control 2",
+      "transitions": [
+        {
+          "event": "LAND",
+          "to": "Wait 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "boolName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "value": true
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "CallMethodProper",
+          "enabled": true
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "GetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": "$Hero Y",
+            "z": 0.0
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 1.0,
+            "finishEvent": "LAND"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Hero Y",
+            "float2": 8.649999618530273,
+            "tolerance": 0.0,
+            "equal": "",
+            "lessThan": "LAND",
+            "greaterThan": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "name": "Wait 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Met in Docks?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "HeroTurnToFace",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.5,
+            "finishEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "name": "Met in Docks?",
+      "transitions": [
+        {
+          "event": "MEET",
+          "to": "Grotto Meet 1"
+        },
+        {
+          "event": "REMEET",
+          "to": "Grotto Remeet 1"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "isTrue": "REMEET",
+            "isFalse": "MEET"
+          }
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "name": "Grotto Meet 1",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Grotto Meet 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": true,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "name": "Grotto Meet 2",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Get Up Start"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "name": "Grotto Meet 3",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "End Dialogue"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FlipScale",
+          "enabled": true
+        },
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": false
+          }
+        },
+        {
+          "name": "SetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.006000000052154064
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "name": "Grotto Remeet 1",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Grotto Remeet 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": true,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "name": "Grotto Remeet 2",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Get Up Start 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "name": "Grotto Remeet 3",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "End Dialogue"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": false,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "FlipScale",
+          "enabled": true
+        },
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": false
+          }
+        },
+        {
+          "name": "SetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.006000000052154064
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "name": "Range Out",
+      "transitions": [
+        {
+          "event": "RANGE IN",
+          "to": "Range Return"
+        },
+        {
+          "event": "BLOCKED HIT",
+          "to": "Swish Block"
+        },
+        {
+          "event": "WAIT",
+          "to": "Swish Block"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "CheckAlertRange",
+          "enabled": true,
+          "params": {
+            "storeResult": false,
+            "InRangeEvent": "RANGE IN",
+            "InRangeDelay": 0.0,
+            "OutOfRangeEvent": "",
+            "OutOfRangeDelay": 0.0
+          }
+        },
+        {
+          "name": "SetInvincible",
+          "enabled": true,
+          "params": {
+            "Invincible": true,
+            "InvincibleFromDirection": 0
+          }
+        },
+        {
+          "name": "WaitRandom",
+          "enabled": true,
+          "params": {
+            "timeMin": 4.0,
+            "timeMax": 8.0,
+            "finishEvent": "WAIT"
+          }
+        },
+        {
+          "name": "PreventInvincibleEffect",
+          "enabled": true,
+          "params": {
+            "preventEffect": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "name": "Pose Swish 3",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "name": "Evade 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Evade Recover 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": -30.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "name": "Evade Recover 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Keep Evading?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "name": "Range Return",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "CrossSlash?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetInvincible",
+          "enabled": true,
+          "params": {
+            "Invincible": false,
+            "InvincibleFromDirection": 0
+          }
+        },
+        {
+          "name": "PreventInvincibleEffect",
+          "enabled": true,
+          "params": {
+            "preventEffect": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "name": "Swish Block",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Range Out"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "AudioPlayRandom",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "name": "Keep Evading?",
+      "transitions": [
+        {
+          "event": "EVADE",
+          "to": "Evade 2"
+        },
+        {
+          "event": "FINISHED",
+          "to": "Range Out"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CheckTargetDirection",
+          "enabled": true,
+          "params": {
+            "aboveEvent": "",
+            "belowEvent": "",
+            "rightEvent": "",
+            "leftEvent": "",
+            "aboveBool": false,
+            "belowBool": false,
+            "rightBool": "$Hero Is Right",
+            "leftBool": false,
+            "selfOffsetX": 0.0,
+            "selfOffsetY": 0.0
+          }
+        },
+        {
+          "name": "CheckXPosition",
+          "enabled": true,
+          "params": {
+            "compareTo": "$Centre X",
+            "compareToOffset": 0.0,
+            "tolerance": 0.0,
+            "equal": "",
+            "equalBool": false,
+            "lessThan": "",
+            "lessThanBool": false,
+            "greaterThan": "",
+            "greaterThanBool": "$Lace Is Right",
+            "activeBool": false
+          }
+        },
+        {
+          "name": "BoolTestMulti",
+          "enabled": true,
+          "params": {
+            "trueEvent": "EVADE",
+            "falseEvent": "",
+            "storeResult": false
+          }
+        },
+        {
+          "name": "BoolTestMulti",
+          "enabled": true,
+          "params": {
+            "trueEvent": "EVADE",
+            "falseEvent": "FINISHED",
+            "storeResult": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "name": "Grotto Refight Setup",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Dormant"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "isTrue": "",
+            "isFalse": "FINISHED"
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SetIsKinematic2d",
+          "enabled": true,
+          "params": {
+            "isKinematic": false
+          }
+        },
+        {
+          "name": "Translate",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 1.0
+          }
+        },
+        {
+          "name": "SetPosition",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.006000000052154064
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": false,
+            "recursive": false
+          }
+        },
+        {
+          "name": "SetScale",
+          "enabled": true,
+          "params": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "name": "Get Up Start",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Grotto Meet 3"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 101,
+      "name": "Get Up Start 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Grotto Remeet 3"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "AudioPlayerOneShot",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 102,
+      "name": "Grotto Refight",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Start Battle"
+        }
+      ],
+      "actions": []
+    },
+    {
+      "index": 103,
+      "name": "Bind Bell Damage",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "RapidSlash End"
+        }
+      ],
+      "actions": [
+        {
+          "name": "DamageHeroDirectly",
+          "enabled": true,
+          "params": {
+            "damageAmount": 1
+          }
+        }
+      ]
+    },
+    {
+      "index": 104,
+      "name": "Sing Antic",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Sing"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "FINISHED",
+            "animationCompleteEvent": ""
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "AudioStop",
+          "enabled": true,
+          "params": {
+            "fadeTime": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 105,
+      "name": "Sing",
+      "transitions": [
+        {
+          "event": "END",
+          "to": "Sing End"
+        },
+        {
+          "event": "SING DURATION END",
+          "to": "Sing End"
+        }
+      ],
+      "actions": [
+        {
+          "name": "EnemySingControl",
+          "enabled": true,
+          "params": {
+            "noThreadEffects": false,
+            "noPuppetString": true,
+            "randomSingStartTime": false,
+            "dontStopAudioOnExit": false
+          }
+        },
+        {
+          "name": "CheckHeroPerformanceRegionV2",
+          "enabled": true,
+          "params": {
+            "Radius": 0.0,
+            "MinReactDelay": 0.5,
+            "MaxReactDelay": 0.5,
+            "None": "END",
+            "ActiveInner": "",
+            "ActiveOuter": "",
+            "IgnoreNeedolinRange": true,
+            "UseActiveBool": false,
+            "ActiveBool": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 106,
+      "name": "Sing End",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Will Counter?"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 107,
+      "name": "Convo 3",
+      "transitions": [
+        {
+          "event": "CONVO_END",
+          "to": "Turn To Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "RunDialogue",
+          "enabled": true,
+          "params": {
+            "OverrideContinue": false,
+            "PreventHeroAnimation": true,
+            "HideDecorators": false,
+            "OffsetY": 0.0
+          }
+        },
+        {
+          "name": "CallMethodProper",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.25
+          }
+        },
+        {
+          "name": "PlayAudioEvent",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 108,
+      "name": "End Dialogue 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Start Battle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": false
+          }
+        },
+        {
+          "name": "EndDialogue",
+          "enabled": true,
+          "params": {
+            "ReturnControl": true,
+            "ReturnHUD": true,
+            "UseChildren": false
+          }
+        },
+        {
+          "name": "CallMethodProper",
+          "enabled": true
+        },
+        {
+          "name": "CallMethodProper",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 109,
+      "name": "Dormant Block",
+      "transitions": [
+        {
+          "event": "BLOCKED HIT",
+          "to": "Dormant Block"
+        },
+        {
+          "event": "FINISHED",
+          "to": "Dormant Blocked Idle"
+        },
+        {
+          "event": "ENTER",
+          "to": "Location Check 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "CreateNoise",
+          "enabled": true,
+          "params": {
+            "Radius": 6.0
+          }
+        },
+        {
+          "name": "SpawnObjectFromGlobalPool",
+          "enabled": true,
+          "params": {
+            "gameObject": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "spawnPoint": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "storeObject": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "PlayAudioEvent",
+          "enabled": true,
+          "params": {
+            "pitchMin": 0.8500000238418579,
+            "pitchMax": 1.149999976158142,
+            "volume": 1.0
+          }
+        },
+        {
+          "name": "SetRandomRotation",
+          "enabled": true,
+          "params": {
+            "x": false,
+            "y": false,
+            "z": true
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true,
+            "newAnimationClip": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ReceivedDamage",
+          "enabled": true,
+          "params": {
+            "sendEvent": "BLOCKED HIT",
+            "sendEventHeavy": "",
+            "sendEventSpikes": "",
+            "sendEventLava": "",
+            "sendEventLightning": "",
+            "ignoreAcid": false,
+            "ignoreLava": false,
+            "ignoreWater": false,
+            "ignoreHunterWeapon": false,
+            "ignoreTraps": false,
+            "ignoreNail": false,
+            "ignoreSpikes": false,
+            "storeDamageDealt": 0,
+            "storeDirection": 0.0,
+            "storeMagnitudeMultiplier": 0.0,
+            "firstHitOnly": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 110,
+      "name": "Block Voice",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Dormant Block"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$NPC Blocked Hit",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "AudioPlayRandomVoice",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 111,
+      "name": "Dormant Blocked Idle",
+      "transitions": [
+        {
+          "event": "BLOCKED HIT",
+          "to": "Dormant Block"
+        },
+        {
+          "event": "ENTER",
+          "to": "Scene Start"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "ActivateGameObject",
+          "enabled": true,
+          "params": {
+            "activate": true,
+            "recursive": false
+          }
+        },
+        {
+          "name": "ReceivedDamage",
+          "enabled": true,
+          "params": {
+            "sendEvent": "BLOCKED HIT",
+            "sendEventHeavy": "",
+            "sendEventSpikes": "",
+            "sendEventLava": "",
+            "sendEventLightning": "",
+            "ignoreAcid": false,
+            "ignoreLava": false,
+            "ignoreWater": false,
+            "ignoreHunterWeapon": false,
+            "ignoreTraps": false,
+            "ignoreNail": false,
+            "ignoreSpikes": false,
+            "storeDamageDealt": 0,
+            "storeDirection": 0.0,
+            "storeMagnitudeMultiplier": 0.0,
+            "firstHitOnly": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 112,
+      "name": "Conduct End",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Convo 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$NPC Blocked Hit",
+            "isTrue": "FINISHED",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "AudioPlayRandomVoiceFromTable",
+          "enabled": true,
+          "params": {
+            "pitchOffset": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 113,
+      "name": "Turn To Idle",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Convo 4"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$NPC Blocked Hit",
+            "isTrue": "FINISHED",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "SetScale",
+          "enabled": true,
+          "params": {
+            "x": -1.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "audioPlayer": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 114,
+      "name": "Take Control New",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Wait 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Dormant Block",
+            "isTrue": "FINISHED",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "RunFSM",
+          "enabled": true,
+          "params": {
+            "finishEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 115,
+      "name": "To Idle",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Scene Start"
+        }
+      ],
+      "actions": [
+        {
+          "name": "AudioPlayerOneShotSingle",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 116,
+      "name": "Capture Hero",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hero Turn"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Dormant Block",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "TransitionToAudioSnapshot",
+          "enabled": true,
+          "params": {
+            "transitionTime": 6.0
+          }
+        },
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "isTrue": "FINISHED",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "RunFSM",
+          "enabled": true,
+          "params": {
+            "finishEvent": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 117,
+      "name": "Location Check 2",
+      "transitions": [
+        {
+          "event": "DOCKS",
+          "to": "Capture Hero"
+        },
+        {
+          "event": "GROTTO",
+          "to": "Capture Hero 2"
+        }
+      ],
+      "actions": [
+        {
+          "name": "BoolTest",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Needolin Fight",
+            "isTrue": "GROTTO",
+            "isFalse": "DOCKS"
+          }
+        }
+      ]
+    },
+    {
+      "index": 118,
+      "name": "Capture Hero 2",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Hero Turn"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetBoolValue",
+          "enabled": true,
+          "params": {
+            "boolVariable": "$Dormant Block",
+            "boolValue": true
+          }
+        },
+        {
+          "name": "TransitionToAudioSnapshot",
+          "enabled": true,
+          "params": {
+            "transitionTime": 6.0
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "SetPlayerDataBool",
+          "enabled": true,
+          "params": {
+            "value": true
+          }
+        },
+        {
+          "name": "RunFSM",
+          "enabled": true,
+          "params": {
+            "finishEvent": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 119,
+      "name": "Wait Shorter",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Convo 1"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 1.0,
+            "finishEvent": ""
+          }
+        }
+      ]
+    },
+    {
+      "index": 120,
+      "name": "Hero Turn",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Wait Lace Anim"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "isTrue": "FINISHED",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "HeroTurnToFace",
+          "enabled": true
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 121,
+      "name": "Wait Lace Anim",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "To Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dWatchAnimationEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.5,
+            "finishEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 122,
+      "name": "Lava Damage",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Lava Hop"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "sendEvent": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SubtractHP",
+          "enabled": true,
+          "params": {
+            "amount": 40
+          }
+        },
+        {
+          "name": "FreezeMoment",
+          "enabled": true
+        },
+        {
+          "name": "PlayAudioEvent",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "SpawnedPlayerRef": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "SpawnObjectFromGlobalPool",
+          "enabled": true,
+          "params": {
+            "gameObject": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "spawnPoint": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "storeObject": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "GetFsmFloat",
+          "enabled": true,
+          "params": {
+            "fsmName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "variableName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "storeValue": "$Lava Pos Y"
+          }
+        },
+        {
+          "name": "FloatAdd",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Lava Pos Y",
+            "add": 0.20000000298023224
+          }
+        },
+        {
+          "name": "GetPosition2d",
+          "enabled": true,
+          "params": {
+            "x": "$Self X",
+            "y": 0.0
+          }
+        },
+        {
+          "name": "FloatClamp",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Self X",
+            "minValue": 79.0,
+            "maxValue": 109.0
+          }
+        },
+        {
+          "name": "SetPosition2d",
+          "enabled": true,
+          "params": {
+            "x": "$Self X",
+            "y": "$Lava Pos Y"
+          }
+        },
+        {
+          "name": "PlayRandomAudioClipTable",
+          "enabled": true
+        },
+        {
+          "name": "SetGravity2dScale",
+          "enabled": true,
+          "params": {
+            "gravityScale": 0.0
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.8500000238418579,
+            "finishEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SetRecoilBlocked",
+          "enabled": true,
+          "params": {
+            "IsUpBlocked": true,
+            "IsDownBlocked": true,
+            "IsLeftBlocked": true,
+            "IsRightBlocked": true
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true
+        },
+        {
+          "name": "ObjectJitterOnRender",
+          "enabled": true,
+          "params": {
+            "X": 0.05000000074505806,
+            "Y": 0.05000000074505806,
+            "Z": 0.0,
+            "LimitFps": 30.0
+          }
+        },
+        {
+          "name": "SetSpecialDeath",
+          "enabled": true,
+          "params": {
+            "hasSpecialDeath": true
+          }
+        }
+      ]
+    },
+    {
+      "index": 123,
+      "name": "Lava Hop",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Lava Tele Out"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimation",
+          "enabled": true,
+          "params": {
+            "animLibName": {
+              "x": 0.0,
+              "y": 0.0
+            }
+          }
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 80.0
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 1
+          }
+        },
+        {
+          "name": "DecelerateXY",
+          "enabled": true,
+          "params": {
+            "decelerationX": 0.0,
+            "decelerationY": 0.8500000238418579
+          }
+        },
+        {
+          "name": "Wait",
+          "enabled": true,
+          "params": {
+            "time": 0.4000000059604645,
+            "finishEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SpawnObjectFromGlobalPool",
+          "enabled": true,
+          "params": {
+            "gameObject": {
+              "x": 0.0,
+              "y": 2.0,
+              "z": 0.0
+            },
+            "spawnPoint": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "storeObject": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "PlayAudioEvent",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0,
+            "SpawnedPlayerRef": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "PlayAudioEvent",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.0,
+            "pitchMax": 1.0,
+            "volume": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 124,
+      "name": "Lava Tele Out",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Set Tele Pos X"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayRandomAudioClipTable",
+          "enabled": true
+        },
+        {
+          "name": "SetVelocity2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "clipName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 125,
+      "name": "Set Tele Pos X",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Tele In"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetPosition2d",
+          "enabled": true,
+          "params": {
+            "x": "$Centre X",
+            "y": "$Land Y"
+          }
+        },
+        {
+          "name": "GetXDistance",
+          "enabled": true,
+          "params": {
+            "target": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": 3.0,
+            "tolerance": 0.0,
+            "equal": "",
+            "lessThan": "",
+            "greaterThan": "FINISHED"
+          }
+        },
+        {
+          "name": "GetScale",
+          "enabled": true,
+          "params": {
+            "xScale": "$X Scale",
+            "yScale": 0.0,
+            "zScale": 0.0
+          }
+        },
+        {
+          "name": "FloatMultiply",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$X Scale",
+            "multiplyBy": 8.0
+          }
+        },
+        {
+          "name": "Translate",
+          "enabled": true,
+          "params": {
+            "x": "$X Scale",
+            "y": 0.0,
+            "z": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "index": 126,
+      "name": "Tele In",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Lava End"
+        }
+      ],
+      "actions": [
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 127,
+      "name": "Lava End",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Idle"
+        }
+      ],
+      "actions": [
+        {
+          "name": "SetGravity2dScale",
+          "enabled": true,
+          "params": {
+            "gravityScale": "$Gravity"
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SendEventByName",
+          "enabled": true,
+          "params": {
+            "delay": 0.0
+          }
+        },
+        {
+          "name": "SetRecoilBlocked",
+          "enabled": true,
+          "params": {
+            "IsUpBlocked": false,
+            "IsDownBlocked": false,
+            "IsLeftBlocked": false,
+            "IsRightBlocked": false
+          }
+        },
+        {
+          "name": "SetSpecialDeath",
+          "enabled": true,
+          "params": {
+            "hasSpecialDeath": false
+          }
+        },
+        {
+          "name": "SetDamageHeroAmount",
+          "enabled": true,
+          "params": {
+            "damageDealt": 1
+          }
+        }
+      ]
+    },
+    {
+      "index": 128,
+      "name": "Wallcling",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Kickoff"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayAudioEvent",
+          "enabled": true,
+          "params": {
+            "pitchMin": 1.2000000476837158,
+            "pitchMax": 1.2000000476837158,
+            "volume": 1.0,
+            "SpawnedPlayerRef": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          }
+        },
+        {
+          "name": "SetGravity2dScale",
+          "enabled": true,
+          "params": {
+            "gravityScale": 0.0
+          }
+        },
+        {
+          "name": "SetVelocityByScale",
+          "enabled": true,
+          "params": {
+            "speed": 30.0,
+            "ySpeed": 0.0
+          }
+        },
+        {
+          "name": "Tk2dPlayAnimationWithEvents",
+          "enabled": true,
+          "params": {
+            "animationTriggerEvent": "",
+            "animationCompleteEvent": "FINISHED"
+          }
+        }
+      ]
+    },
+    {
+      "index": 129,
+      "name": "Dstab Constrain?",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Downstab Antic"
+        }
+      ],
+      "actions": [
+        {
+          "name": "GetPosition2d",
+          "enabled": true,
+          "params": {
+            "x": "$Self X",
+            "y": 0.0
+          }
+        },
+        {
+          "name": "FloatInRange",
+          "enabled": true,
+          "params": {
+            "floatVariable": "$Self X",
+            "lowerValue": 86.0,
+            "upperValue": 102.0,
+            "boolVariable": false,
+            "trueEvent": "",
+            "falseEvent": "FINISHED"
+          }
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        },
+        {
+          "name": "SendMessage",
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "index": 130,
+      "name": "Kickoff",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "J Slash 1"
+        }
+      ],
+      "actions": [
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": true
+          }
+        },
+        {
+          "name": "GetXDistance",
+          "enabled": true,
+          "params": {
+            "storeResult": "$Distance"
+          }
+        },
+        {
+          "name": "FloatCompare",
+          "enabled": true,
+          "params": {
+            "float1": "$Distance",
+            "float2": 2.0,
+            "tolerance": 0.0,
+            "equal": "",
+            "lessThan": "",
+            "greaterThan": "FINISHED"
+          }
+        },
+        {
+          "name": "FaceObjectV2",
+          "enabled": true,
+          "params": {
+            "spriteFacesRight": false
+          }
+        }
+      ]
+    },
+    {
+      "index": 131,
+      "name": "Use Wall Range?",
+      "transitions": [
+        {
+          "event": "FINISHED",
+          "to": "Grotto Refight Setup"
+        }
+      ],
+      "actions": [
+        {
+          "name": "PlayerDataBoolTest",
+          "enabled": true,
+          "params": {
+            "boolName": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "isTrue": "FINISHED",
+            "isFalse": ""
+          }
+        },
+        {
+          "name": "FindChild",
+          "enabled": true
+        },
+        {
+          "name": "SetPosition2d",
+          "enabled": true,
+          "params": {
+            "x": 0.0,
+            "y": 500.0
+          }
+        }
+      ]
+    }
+  ]
+}

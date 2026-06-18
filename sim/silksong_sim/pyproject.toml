@@ -1,0 +1,16 @@
+[build-system]
+requires = []
+build-backend = "madrona-py-build"
+backend-path = ["external/madrona/py"]
+
+[project]
+name = "silksong_sim"
+version = "0.0.1"
+
+[tool.madrona.packages.silksong_sim]
+ext-only = true
+ext-out-dir = "build"
+
+# This module includes the PPO implementation for the training demo
+[tool.madrona.packages.silksong_sim_learn]
+path = "train_src/silksong_sim_learn"

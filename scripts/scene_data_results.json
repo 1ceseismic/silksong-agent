@@ -1,0 +1,306 @@
+{
+  "boss_rigidbody": {
+    "gravityScale": 2.0,
+    "mass": 1.0,
+    "bodyType": 1,
+    "linearDrag": 0
+  },
+  "boss_health_manager": {
+    "hp": 1800,
+    "invulnerableTime": 0.25,
+    "hasSpecialDeath": 1,
+    "preventDeathAfterHero": 1,
+    "preventInvincibleEffect": 1
+  },
+  "boss_damage_hero": {
+    "damageDealt": 2,
+    "hazardType": 1,
+    "canClashTink": 0,
+    "forceParry": 0
+  },
+  "stun_control_fsm": {
+    "Stun Combo": 16,
+    "Stun Hit Max": 18,
+    "Combo Time": 1.0,
+    "Epsilon": 0.01
+  },
+  "lace_control_fsm_vars": {
+    "Combo Slash Speed": 40.0,
+    "Counter Pause": 0.15,
+    "Gravity": 2.0,
+    "Idle Time": 0.7,
+    "Land Y": 6.4,
+    "Dive In Splash Y": 7.5,
+    "Tele X Min": 6.0,
+    "Tele X Max": 51.0,
+    "Wallcling Min Y": 99.0,
+    "Recoil Default": 12.0,
+    "Recoil Reduced": 5.0,
+    "Abyss Wave Countdown": 2
+  },
+  "attack_hitboxes": {
+    "Charge Hit": {
+      "type": "polygon",
+      "half_w": 3.07,
+      "half_h": 1.31,
+      "x_range": [
+        0.14,
+        3.07
+      ],
+      "y_range": [
+        -1.31,
+        0.94
+      ]
+    },
+    "Downstab Hit": {
+      "type": "polygon",
+      "half_w": 1.62,
+      "half_h": 2.0,
+      "x_range": [
+        -0.62,
+        1.62
+      ],
+      "y_range": [
+        -2.0,
+        0.28
+      ]
+    },
+    "MultiHit": {
+      "type": "polygon",
+      "half_w": 7.5,
+      "half_h": 1.35,
+      "x_range": [
+        -0.14,
+        7.5
+      ],
+      "y_range": [
+        -1.35,
+        1.2
+      ]
+    },
+    "Combo Slash 1": {
+      "type": "polygon",
+      "half_w": 5.12,
+      "half_h": 2.66,
+      "x_range": [
+        -1.88,
+        5.12
+      ],
+      "y_range": [
+        -1.2,
+        2.66
+      ]
+    },
+    "Combo Slash 2": {
+      "type": "polygon",
+      "half_w": 4.79,
+      "half_h": 2.73,
+      "x_range": [
+        -2.37,
+        4.79
+      ],
+      "y_range": [
+        -0.94,
+        2.73
+      ]
+    },
+    "Combo Slash BodyCatcher": {
+      "type": "box",
+      "size_x": 1.53,
+      "size_y": 2.81,
+      "half_w": 0.77,
+      "half_h": 1.41,
+      "offset_x": 0.48
+    },
+    "Thwip Slash": {
+      "type": "polygon",
+      "half_w": 1.98,
+      "half_h": 1.64,
+      "x_range": [
+        -1.63,
+        1.98
+      ],
+      "y_range": [
+        -0.36,
+        1.64
+      ]
+    },
+    "Circle Slash Multi": {
+      "type": "circle",
+      "radius": 2.26
+    },
+    "MultiHit Air": {
+      "type": "polygon",
+      "half_w": 7.67,
+      "half_h": 1.35,
+      "x_range": [
+        -0.12,
+        7.67
+      ],
+      "y_range": [
+        -1.35,
+        0.53
+      ]
+    },
+    "Whip Attack Damager": {
+      "type": "polygon",
+      "half_w": 3.89,
+      "half_h": 1.73,
+      "x_range": [
+        -3.47,
+        3.89
+      ],
+      "y_range": [
+        -1.63,
+        1.73
+      ]
+    },
+    "Cross Slash Lace Collider": {
+      "type": "box",
+      "size_x": 1.0,
+      "size_y": 1.0,
+      "half_w": 0.5,
+      "half_h": 0.5
+    },
+    "NoThwip Range": {
+      "type": "box",
+      "size_x": 9.47,
+      "size_y": 6.15,
+      "offset_y": 1.13
+    },
+    "Evade Range": {
+      "type": "box",
+      "size_x": 12.0,
+      "size_y": 8.45,
+      "offset_y": 2.28
+    },
+    "Above Range": {
+      "type": "box",
+      "size_x": 12.0,
+      "size_y": 12.79,
+      "offset_y": 8.32
+    }
+  },
+  "hero_controller": {
+    "INVUL_TIME": 1.0,
+    "INVUL_TIME_PARRY": 0.15,
+    "INVUL_TIME_CROSS_STITCH": 0.35,
+    "INVUL_TIME_SILKDASH": 0.5,
+    "RECOIL_VELOCITY": 15.0,
+    "RECOIL_HOR_VELOCITY": 3.75,
+    "RECOIL_HOR_STEPS": 8,
+    "RECOIL_DURATION": 0.2,
+    "RECOIL_HOR_VELOCITY_LONG": 16.0,
+    "RUN_SPEED": 8.25,
+    "WALK_SPEED": 5.0,
+    "DASH_SPEED": 28.0,
+    "DASH_TIME": 0.1,
+    "DASH_COOLDOWN": 0.425,
+    "AIR_DASH_TIME": 0.02,
+    "DOWN_DASH_TIME": 0.25,
+    "JUMP_SPEED": 18.6,
+    "JUMP_STEPS": 8,
+    "JUMP_STEPS_MIN": 2,
+    "MIN_JUMP_SPEED": 3.0,
+    "DEFAULT_GRAVITY": 1.0,
+    "AIR_HANG_GRAVITY": 0.1,
+    "AIR_HANG_ACCEL": 5.0,
+    "MAX_FALL_VELOCITY": 30.0,
+    "MAX_FALL_VELOCITY_DJUMP": 10.0,
+    "DOUBLE_JUMP_RISE_STEPS": 4,
+    "DOUBLE_JUMP_FALL_STEPS": 4,
+    "SHUTTLECOCK_SPEED": 18.0,
+    "WALL_STICKY_STEPS": 3,
+    "WJ_KICKOFF_SPEED": 25.0,
+    "WJLOCK_STEPS_SHORT": 5,
+    "WJLOCK_STEPS_LONG": 15,
+    "WALLSLIDE_ACCEL": -24.0,
+    "WALLSLIDE_SHUTTLECOCK_VEL": 12.0,
+    "BOUNCE_VELOCITY": 12.0,
+    "DOWNSPIKE_REBOUND_SPEED": 20.0,
+    "DOWNSPIKE_REBOUND_STEPS": 6,
+    "DASH_QUEUE_STEPS": 10
+  },
+  "hero_colliders": {
+    "Hero_Hornet_physics": {
+      "type": "BoxCollider2D",
+      "size_x": 0.5,
+      "size_y": 2.0789,
+      "offset_x": 0.0,
+      "offset_y": -0.5132,
+      "half_w": 0.25,
+      "half_h": 1.0395,
+      "is_trigger": false,
+      "note": "Physics body collider (non-trigger)"
+    },
+    "HeroBox_hurtbox": {
+      "type": "BoxCollider2D",
+      "size_x": 0.4554,
+      "size_y": 1.9864,
+      "offset_x": 0.0,
+      "offset_y": -0.0868,
+      "half_w": 0.2277,
+      "half_h": 0.9932,
+      "is_trigger": true,
+      "note": "Hurtbox (trigger)"
+    }
+  },
+  "arena_geometry": {
+    "note": "Abyss Cocoon scene, tile-based EdgeCollider2D",
+    "floor_y": 4.0,
+    "left_wall_x": 3.0,
+    "right_wall_x": 55.0,
+    "boss_spawn": {
+      "x": 38.0,
+      "y": 7.07
+    },
+    "tele_x_min": 6.0,
+    "tele_x_max": 51.0,
+    "key_chunks": {
+      "Chunk 0 0 (x=0-32, y=0-32)": "Left side, floor at y=4 from x=3 to x=32, left cliff rising from x=3",
+      "Chunk 0 1 (x=32-64, y=0-32)": "Right side, floor at y=4 from x=32 to x=55, right cliff rising from x=55"
+    }
+  },
+  "corrections_needed": {
+    "bossStunThreshold": {
+      "current": 7,
+      "ground_truth": 16,
+      "note": "Stun Combo from Stun Control FSM"
+    },
+    "bossMaxHP": {
+      "current": 800,
+      "ground_truth": 1800,
+      "note": "HealthManager hp field"
+    },
+    "heroHalfWidth": {
+      "current": 0.4,
+      "ground_truth": 0.25,
+      "note": "Hero_Hornet BoxCollider2D size.x/2"
+    },
+    "heroHalfHeight": {
+      "current": 0.568,
+      "ground_truth": 1.0395,
+      "note": "Hero_Hornet BoxCollider2D size.y/2"
+    },
+    "heroRecoilFrames": {
+      "current": 5,
+      "ground_truth": 8,
+      "note": "RECOIL_HOR_STEPS"
+    },
+    "airHangGravScale": {
+      "current": 0.2,
+      "ground_truth": 0.1,
+      "note": "AIR_HANG_GRAVITY"
+    },
+    "jumpStepsMax": {
+      "current": 9,
+      "ground_truth": 8,
+      "note": "JUMP_STEPS"
+    },
+    "heroRecoilSpeed_horizontal": {
+      "current": "uses 15.0",
+      "ground_truth": 3.75,
+      "note": "RECOIL_HOR_VELOCITY (horizontal), RECOIL_VELOCITY=15.0 (vertical)"
+    }
+  }
+}
