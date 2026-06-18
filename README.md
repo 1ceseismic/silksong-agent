@@ -49,14 +49,21 @@ GameState}` traces via the plugin's F10 toggle for trace-diff validation.
 If you need to bring that side up, see `docs/framework-requirements.md` §3
 (obs/action contract) and §5 (fidelity oracle). In brief:
 
-- Own a copy of [Hollow Knight: Silksong](https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/), install [BepInEx 5](https://github.com/BepInEx/BepInEx/releases) into the game folder, drop `steam_appid.txt` containing `1030300` next to the executable.
-- Copy `resources/user1.dat` into the Silksong save folder (Linux: `~/.config/unity3d/Team Cherry/Hollow Knight Silksong/default`; Windows: `%USERPROFILE%\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\default`).
-- `cp plugin/Directory.Build.props.example plugin/Directory.Build.props`, `cp .env.example .env`, set `SILKSONG_PATH` to the game executable.
+- Install a copy of [Hollow Knight: Silksong](https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong/), install [BepInEx 5](https://github.com/BepInEx/BepInEx/releases) into the game folder, drop `steam_appid.txt` containing `1030300` next to the executable.
+- Copy `resources/user1.dat` into the Silksong save folder
+  - (Linux: `~/.config/unity3d/Team Cherry/Hollow Knight Silksong/default`
+  -  Windows: `%USERPROFILE%\AppData\LocalLow\Team Cherry\Hollow Knight Silksong\default`)
+- `cp plugin/Directory.Build.props.example plugin/Directory.Build.props`, `cp .env.example .env`,
+    - set `SILKSONG_PATH` to the game executable
 - `dotnet build plugin`, which copies the plugin into `BepInEx/plugins/` automatically.
 
-Debug / trace keys in-game: `F1` state overlay, `F2` raycast viz, `F9`
-minimal rendering (NoFx only), `F10` start/stop trace recording. Traces are
-read back via [`scripts/read_trace.py`](./scripts/read_trace.py).
+Debug / trace keys in-game:
+- `F1` state overlay,
+- `F2` raycast viz, 
+- `F9`minimal rendering (NoFx only),
+- `F10` start/stop trace recording
+    
+Traces are read back via [`scripts/read_trace.py`](./scripts/read_trace.py).
 
 Do **not** use the SB3 trainers (`train.py`, `tune.py`) for new work, they
 remain only so existing 30M-step checkpoints stay reproducible.
@@ -67,6 +74,5 @@ Sim forked from [`madrona_escape_room`](https://github.com/shacklettbp/madrona_e
 Original Unity plugin + SB3 pipeline inspired by [HKRL](https://github.com/AdityaJain1030/HKRL);
 multi-instance + Linux support carried forward from [deeean's fork](https://github.com/deeean).
 
-## License
-
+license:
 MIT License
